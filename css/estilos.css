@@ -1,0 +1,1294 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+/* =====================================
+   RESET BÁSICO Y CONFIGURACIÓN GLOBAL
+   ===================================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+/* CABECERA GENERAL */
+.banner-top {
+  background-color: #f5a623; /* naranja cálido y accesible */
+  color: white;
+  text-align: center;
+  font-size: 1em;
+  padding: 6px 12px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.cabecera-contenido {
+  width: 100%;
+  padding: 0;
+}
+
+.cabecera {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 9999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* MENÚ SUPERIOR */
+.menu-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px 2px 20px;
+  background-color: #f4f4f4;
+  font-size: 0.9em;
+  
+}
+.logo-superior img {
+  height: 75px;
+  margin-top: 0;    
+  margin-bottom: 0;  
+}
+
+.menu-superior ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin-left: auto;
+}
+.menu-superior a {
+  color: #0e3a60; /* azul corporativo sobrio */
+  font-weight: 600;
+  font-size: 0.95em;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+
+.menu-superior a:hover i {
+  transform: scale(1.25);
+  color: #f5a623; /* Naranja cálido AFANAS */
+}
+
+.menu-superior {
+  transition: padding 0.3s ease;
+}
+
+.logo-superior img {
+  height: 130px;
+  transition: height 0.3s ease;
+}
+
+.menu-superior.reducido {
+  padding: 2px 20px;
+}
+
+.menu-superior.reducido .logo-superior img {
+  height: 60px;
+}
+
+.menu-superior i {
+  margin-right: 6px;
+  color: #6cc2b3; /* Azul verdoso social (puedes cambiarlo por otro) */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* MENÚ PRINCIPAL */
+.menu-principal {
+  background: linear-gradient(to bottom, #ffffff, #f1f9fc); /* blanco → azul muy suave */
+  padding: 6px 30px 0 30px;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.menu-principal i {
+  margin-right: 6px;
+}
+.menu-principal a i {
+  transition: transform 0.3s ease;
+}
+
+.menu-principal a:hover i {
+  animation: pop-icono 0.4s ease-in-out;
+}
+.menu-principal .logo img {
+  height: 85px;
+  margin-top: -20px;
+}
+.menu-principal ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  background: linear-gradient(to bottom, #ffffff, #f1f9fc);
+  padding: 10px;
+}
+.menu-principal nav ul li {
+  flex: 1 0 auto;
+}
+/* Hover en el menú: color + ampliación */
+.menu-principal nav a {
+  color: #0e3a60;
+  font-size: 1em;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.menu-principal nav a:hover {
+  color: #6cc2b3; /* azul verdoso social */
+  transform: scale(1.15);
+}
+
+/* MENÚ REDES SOCIALES */
+.menu-redes {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+  padding: 8px 30px;
+  background-color: #f4f4f4;
+  transition: all 0.3s ease;
+  height: auto;
+  opacity: 1;
+  overflow: visible;
+}
+
+.menu-redes.oculto {
+  height: 0;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 7px; /* 👈 mantenemos un pelín de espacio */
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.menu-redes ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+.menu-redes a {
+  font-size: 1.2em;
+  color: #0e3a60;
+  transition: transform 0.2s ease;
+}
+.menu-redes a:hover {
+  transform: scale(1.2);
+}
+.menu-redes .siguenos {
+  font-weight: bold;
+  color: #0e3a60;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.menu-redes .siguenos i {
+  font-size: 1.2em;
+}
+
+/* EFECTO HOVER ENLACES */
+.menu-superior a,
+.menu-principal nav a,
+.menu-redes a {
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+.menu-superior a:hover,
+.menu-principal nav a:hover,
+.menu-redes a:hover {
+  transform: scale(1.15);
+}
+
+/* AJUSTE PARA QUE NO SE OCUPE EL HERO DEBAJO DEL HEADER */
+main {
+  padding-top: 40px;
+}
+
+/* LÍNEA SEPARADORA */
+/* Línea separadora con degradado azul-verde social */
+.linea-separadora {
+  height: 3px;
+  background: linear-gradient(to right, #0e3a60, #6cc2b3);
+  margin: 0;
+}
+
+
+/* HERO CARRUSEL */
+.hero-carrusel {
+  position: relative;
+  height: 150vh;
+  overflow: hidden;
+  margin-bottom: 0;
+  padding-bottom: 10;
+}
+
+.logo-central-afanas {
+  position: absolute;
+  top: 58%; /* antes estaba en 70% o más */
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  opacity: 0;
+  z-index: 4;
+  animation: aparecerLogo 1.2s ease-in-out forwards;
+  animation-delay: 2.1s;
+}
+
+.logo-central-afanas img {
+  max-width: 130px;
+  height: auto;
+}
+
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.slider-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+.slide.active {
+  display: block;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.frase {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.8); /* fondo claro */
+  color: #0e3a60; /* azul AFANAS */
+  padding: 14px 28px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  max-width: 80%;
+  text-align: center;
+  z-index: 3;
+  backdrop-filter: blur(4px);
+  font-family: 'Poppins', sans-serif;
+}
+
+.frase-principal {
+  animation: fraseDesciende 2s ease-in-out forwards;
+}
+
+.slide.active .frase {
+  animation: aparecerFlotando 1.2s ease-out forwards;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  font-size: 30px;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.prev {
+  left: 20px;
+}
+.next {
+  right: 20px;
+}
+/* BOTONES EL PROYECTO*/
+.botones-proyecto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.boton-proyecto {
+  display: inline-block;
+  background-color: #0e3a60;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.boton-proyecto:hover {
+  background-color: #6cc2b3;
+  color: #0e3a60;
+}
+
+/* QUIÉNES SOMOS */
+.quienes-somos {
+  background-color: white;
+  padding: 60px 20px;
+}
+.quienes-somos .contenedor {
+  max-width: 1200px;
+  margin: auto;
+}
+.quienes-somos h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #0e3a60;
+}
+.quienes-somos .contenido {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.quienes-somos .texto {
+  flex: 1;
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+.quienes-somos .imagen {
+  flex: 1;
+}
+.quienes-somos .imagen img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.equipo-afanas {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+}
+
+.equipo-afanas h2 {
+  color: #0e3a60;
+  font-size: 2.2em;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.bloque-equipo {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.bloque-equipo img {
+  flex: 1 1 300px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.bloque-equipo .texto {
+  flex: 2 1 400px;
+}
+
+.bloque-equipo h3 {
+  color: #0e3a60;
+  margin-bottom: 10px;
+  font-size: 1.4em;
+}
+
+.bloque-equipo p {
+  font-size: 1.05em;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.boton-descarga {
+  display: inline-block;
+  background-color: #0e3a60;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.boton-descarga i {
+  margin-right: 8px;
+}
+
+.boton-descarga:hover {
+  background-color: #6cc2b3;
+  color: #0e3a60;
+}
+
+/* BOTÓN GENÉRICO */
+.boton {
+  background-color: #0e3a60;
+  color: white;
+  padding: 10px 20px;
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.seccion-proyecto {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.seccion-proyecto h2 {
+  color: #0e3a60;
+  font-size: 2.2em;
+  margin-bottom: 40px;
+}
+
+.bloques-proyecto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bloque {
+  flex: 1 1 280px;
+  background-color: #f4f9fb;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bloque:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.bloque i {
+  font-size: 2.5em;
+  color: #6cc2b3;
+  margin-bottom: 15px;
+}
+
+.bloque h3 {
+  color: #0e3a60;
+  margin-bottom: 10px;
+  font-size: 1.3em;
+}
+
+.bloque p {
+  font-size: 1em;
+  color: #333;
+  line-height: 1.6;
+}
+/* ======================================================
+   Menú desplegable principal
+   ====================================================== */
+/* === Menú principal con subapartados desplegables === */
+
+.submenu {
+  position: relative;
+}
+
+.submenu-lista {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: linear-gradient(to bottom, #ffffff, #f4f8fb);
+  z-index: 1000;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 10px 0;
+  min-width: 220px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  border-top: 3px solid #6cc2b3;
+}
+
+.submenu:hover .submenu-lista {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.submenu-lista li a {
+  display: block;
+  padding: 10px 16px;
+  color: #0e3a60;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95em;
+  transition: all 0.2s ease;
+}
+
+.submenu-lista li a:hover {
+  background-color: #e9f6f9;
+  color: #0e3a60;
+  font-weight: 600;
+  border-left: 4px solid #6cc2b3;
+}
+.submenu-lista li a:target,
+.submenu-lista li a:focus {
+  background-color: #d9f1f5;
+  color: #0e3a60;
+  font-weight: 700;
+  border-left: 4px solid #0e3a60;
+}
+
+
+/* ======================================
+   FOOTER AFANAS
+   ====================================== */
+   .footer {
+    background-color: #0e3a60;
+    color: #fff;
+    padding: 40px 20px 20px;
+    font-size: 0.9em;
+  }
+  
+  .contenedor-footer {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  
+  .footer-info p,
+  .footer-enlaces ul,
+  .footer-copy {
+    margin: 5px 0;
+  }
+  
+  .footer-enlaces ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-enlaces a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin: 4px 0;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-enlaces a:hover {
+    color: #6cc2b3;
+  }
+  
+  .footer-redes a {
+    font-size: 1.2em;
+    color: #fff;
+    margin-right: 12px;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .footer-redes a:hover {
+    color: #f5a623;
+    transform: scale(1.2);
+  }
+  
+  .footer-copy {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.85em;
+    color: #ccc;
+  }
+
+  .footer-legal {
+    background-color: #08345c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  .footer-legal ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .footer-legal ul li {
+    margin: 8px 0;
+  }
+  .footer-legal ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .footer-legal ul li a:hover {
+    text-decoration: underline;
+    color: #6cc2b3;
+  }
+  
+  /* =======================================
+   ESTILO GENERAL PARA SUBPÁGINAS (proyecto)
+   ======================================= */
+main.contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+main h1 {
+  font-size: 2.2em;
+  color: #0e3a60;
+  border-left: 6px solid #6cc2b3;
+  padding-left: 16px;
+  margin-bottom: 30px;
+}
+
+main p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+main ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+main ul li {
+  margin-bottom: 10px;
+}
+main > section:first-child {
+  margin-top: 50px;
+}
+
+body.subpagina p {
+  font-size: 1em; /* Baja de 1.1em a 1em */
+}
+
+/* Imagen decorativa o destacada opcional */
+.img-seccion {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+/* SECCIÓN QUIÉNES SOMOS */
+.quienes-somos {
+  background-color: #ffffff;
+  padding: 60px 20px;
+}
+.quienes-somos .contenido {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+.quienes-somos .texto {
+  flex: 1;
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+.quienes-somos .imagen {
+  flex: 1;
+}
+.quienes-somos .imagen img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+
+.año {
+  font-weight: bold;
+  color: #0e3a60;
+  font-size: 1.2em;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+/* NUESTRA FILOSOFÍA */
+.filosofia-afanas {
+  background-color: #f4f9fc;
+  padding: 50px 0;
+}
+
+.filosofia-afanas .contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.filosofia-afanas h2 {
+  text-align: center;
+  font-size: 2em;
+  color: #0e3a60;
+  margin-bottom: 40px;
+}
+
+.contenido-filosofia {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+
+.contenido-filosofia img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.contenido-filosofia .texto {
+  flex: 1;
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
+
+
+/* Ajuste de espacio superior para subpáginas */
+body.subpagina main {
+  padding-top: 225px
+}
+body.subpagina .menu-redes {
+  transition: transform 0.3s ease-in-out;
+}
+
+body.subpagina.scroll-down .menu-redes {
+  transform: translateY(-100%);
+}
+body.subpagina.scroll-down .menu-redes {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  transform: translateY(-100%);
+  pointer-events: none;
+}
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animación aparición desde abajo */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+
+/* Sección Misión */
+.bloque-mision {
+  background-color: #0e3a60;
+  color: white;
+  padding: 60px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.bloque-mision .texto {
+  flex: 1;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.bloque-mision h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.bloque-mision p {
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
+/* Sección Visión */
+.bloque-vision {
+  background-color: #f4f9fc;
+  padding: 60px 20px;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+  justify-content: center;
+}
+
+.bloque-vision .texto {
+  max-width: 600px;
+  padding: 20px;
+  flex: 1;
+}
+
+.bloque-vision h2 {
+  color: #0e3a60;
+  font-size: 2.2em;
+  margin-bottom: 20px;
+}
+
+.bloque-vision .cita {
+  background-color: rgba(110, 140, 200, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 30px 0;
+  font-weight: bold;
+  color: #0e3a60;
+}
+
+.bloque-vision .autor {
+  font-size: 1em;
+  font-weight: 500;
+  color: #0e3a60;
+}
+
+/* Sección Valores */
+.bloque-valores {
+  background-color: #fff;
+  padding: 60px 20px;
+}
+
+.bloque-valores h2 {
+  color: #0e3a60;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2em;
+}
+
+.lista-valores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.valor {
+  flex: 1 1 280px;
+  max-width: 320px;
+  text-align: center;
+  padding: 20px;
+}
+
+.valor img {
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.valor h3 {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.8em;
+  color: #0e3a60;
+  margin-bottom: 12px;
+}
+
+.valor p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #333;
+}
+
+
+
+/* ===== ESTILO GENERAL DE SECCIONES ===== */
+main.fade-in-up > section {
+  margin-top:60px;
+}
+
+.seccion-mision,
+.seccion-vision {
+  display: flex;
+  align-items: stretch;
+  padding: 0;
+  gap: 0;
+  min-height: 80vh;
+  flex-wrap: wrap;
+}
+
+.seccion-mision {
+  background-color: #2b64aa;
+  color: white;
+}
+.seccion-mision .texto p {
+  color: white;
+}
+
+.seccion-vision .texto p {
+  color: white;
+}
+.seccion-vision {
+  background-color: #2b64aa;
+  color: white;
+}
+
+.seccion-mision .contenido,
+.seccion-vision .contenido {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.seccion-mision .texto,
+.seccion-vision .texto {
+  flex: 1;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white; /* misión */
+}
+
+.seccion-mision .imagen,
+.seccion-vision .imagen {
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+}
+
+.seccion-mision .imagen img,
+.seccion-vision .imagen img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* BLOQUE DE CITA EN VISIÓN */
+.seccion-vision blockquote {
+  background-color: #2b64aa;
+  padding: 20px;
+  margin-top: 30px;
+  border-left: 6px solid #f5a623;
+  font-style: italic;
+}
+
+.seccion-vision cite {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+/* Valores */
+
+.seccion-valores {
+  background-color: #f4f9fc;
+  padding: 80px 20px;
+  text-align: center;
+}
+.seccion-valores h2 {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 2.6em;
+  color: #0e3a60;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.valores-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+.valor {
+  max-width: 280px;
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.valor img {
+  width: 80px;
+  margin-bottom: 16px;
+}
+.valor h3 {
+  font-family: 'Gloria Hallelujah', cursive;
+  color: #205959;
+  margin-bottom: 10px;
+  font-size: 26px;
+  font-weight: 400;
+  text-decoration: underline;
+  text-decoration-line: underline;
+  text-decoration-thickness: initial;
+  text-decoration-style: initial;
+  text-decoration-color: initial
+}
+.valor p {
+  font-size: 1em;
+  color: #03020b;
+  line-height: 1.6;
+}
+/* Espaciado más compacto entre secciones */
+main.subpagina > section {
+  margin-top: 40px !important;
+}
+.subpagina .seccion-mision {
+  margin-top: 50px /* O más si hace falta */
+}
+.subpagina section {
+  margin-bottom: 40px;
+}
+
+
+/* ==========================================
+   ANIMACIONES PERSONALIZADAS Y EFECTOS
+========================================== */
+
+/* Entrada flotante para frases del carrusel */
+@keyframes aparecerFlotando {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -60%) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* Aparición del logo central en carrusel */
+@keyframes aparecerLogo {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 80px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 40px) scale(1);
+  }
+}
+
+/* Fade desde abajo (por ejemplo para fade-in-up) */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade desde arriba con efecto rebote */
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px) scale(1.05);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(5px) scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-down {
+  animation: fadeDown 1s ease-out forwards;
+  opacity: 0;
+}
+
+/* Deslizamiento desde izquierda */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Deslizamiento desde derecha */
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animaciones aplicadas a clases */
+.anim-izquierda {
+  animation: slideInLeft 1s ease-out forwards;
+  opacity: 0;
+}
+
+.anim-derecha {
+  animation: slideInRight 1s ease-out forwards;
+  opacity: 0;
+}
+
+
+/* =========================
+   HISTORIA - DISEÑO VISUAL
+   ========================= */
+
+   /* ==== NUEVA SECCIÓN HISTORIA estilo cronológico vertical AFANAS === */
+.seccion-historia {
+  background-color: #fffef8;
+  padding: 80px 20px;
+  position: relative;
+ 
+}
+
+.seccion-historia h2.frase-historia {
+  text-align: center;
+  font-size: 2.6em;
+  color: #0e3a60;
+  font-family: 'Patrick Hand', cursive;
+  margin-bottom: 60px;
+  animation: fadeDown 1.5s ease-out forwards;
+}
+
+.linea-tiempo-vertical {
+  position: relative;
+  margin: 0 auto;
+  padding-left: 30px;
+  border-left: 4px solid #0e3a60;
+  max-width: 1000px;
+}
+
+.linea-tiempo-vertical::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 0;
+  height: 100%;
+  width: 20px;
+ 
+  background-repeat: repeat-y;
+  background-size: contain;
+  opacity: 0.3;
+}
+
+.evento-vertical {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.evento-vertical:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.evento-vertical .imagen {
+  flex: 1;
+  max-width: 40%;
+}
+.evento-vertical .imagen img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+.evento-vertical .contenido {
+  flex: 2;
+}
+
+.evento-vertical .contenido h3 {
+  font-size: 1.5em;
+  color: #0e3a60;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.evento-vertical .contenido p {
+  font-size: 1.1em;
+  color: #333;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .evento-vertical {
+    flex-direction: column !important;
+  }
+
+  .evento-vertical .imagen, .evento-vertical .contenido {
+    max-width: 100%;
+  }
+}
+
+
+
+
+  
+
+
+
