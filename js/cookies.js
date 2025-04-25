@@ -113,44 +113,51 @@ function cargarScriptsDeTerceros() {
 
 
 
-document.getElementById("abrir-configuracion-cookies")?.addEventListener("click", () => {
-  if (document.querySelector(".cookie-settings")) return;
+document.addEventListener("DOMContentLoaded", function () {
+  const botonFlotante = document.getElementById("abrir-configuracion-cookies");
 
-  const settingsContainer = document.getElementById("cookie-settings-container");
+  botonFlotante?.addEventListener("click", () => {
+    if (document.querySelector(".cookie-settings")) return;
 
-  const settings = document.createElement("div");
-  settings.className = "cookie-settings";
-  settings.innerHTML = `
-    <div class="cookie-settings-content">
-      <h3>Configuración de cookies</h3>
-      <p>Selecciona qué tipo de cookies quieres permitir:</p>
-      <label><input type="checkbox" disabled checked> Cookies necesarias (siempre activas)</label><br>
-      <label><input type="checkbox" id="cookiesEstadisticas"> Cookies estadísticas</label><br>
-      <label><input type="checkbox" id="cookiesMarketing"> Cookies de marketing</label><br>
-      <div class="cookie-settings-buttons">
-        <button id="save-cookie-settings">Guardar preferencias</button>
-        <button id="cancel-cookie-settings">Cancelar</button>
+    const settingsContainer = document.getElementById("cookie-settings-container");
+
+    const settings = document.createElement("div");
+    settings.className = "cookie-settings";
+    settings.innerHTML = `
+      <div class="cookie-settings-content">
+        <h3>Configuración de cookies</h3>
+        <p>Selecciona qué tipo de cookies quieres permitir:</p>
+        <label><input type="checkbox" disabled checked> Cookies necesarias (siempre activas)</label><br>
+        <label><input type="checkbox" id="cookiesEstadisticas"> Cookies estadísticas</label><br>
+        <label><input type="checkbox" id="cookiesMarketing"> Cookies de marketing</label><br>
+        <div class="cookie-settings-buttons">
+          <button id="save-cookie-settings">Guardar preferencias</button>
+          <button id="cancel-cookie-settings">Cancelar</button>
+        </div>
       </div>
-    </div>
-  `;
-  settingsContainer.appendChild(settings);
+    `;
+    settingsContainer.appendChild(settings);
 
-  document.getElementById("cookiesEstadisticas").checked = localStorage.getItem("cookiesEstadisticas") === "true";
-  document.getElementById("cookiesMarketing").checked = localStorage.getItem("cookiesMarketing") === "true";
+    document.getElementById("cookiesEstadisticas").checked = localStorage.getItem("cookiesEstadisticas") === "true";
+    document.getElementById("cookiesMarketing").checked = localStorage.getItem("cookiesMarketing") === "true";
 
-  document.getElementById("save-cookie-settings").addEventListener("click", () => {
-    const estadisticas = document.getElementById("cookiesEstadisticas").checked;
-    const marketing = document.getElementById("cookiesMarketing").checked;
+    document.getElementById("save-cookie-settings").addEventListener("click", () => {
+      const estadisticas = document.getElementById("cookiesEstadisticas").checked;
+      const marketing = document.getElementById("cookiesMarketing").checked;
 
-    localStorage.setItem("cookies-set", "custom");
-    localStorage.setItem("cookiesEstadisticas", estadisticas);
-    localStorage.setItem("cookiesMarketing", marketing);
+      localStorage.setItem("cookies-set", "custom");
+      localStorage.setItem("cookiesEstadisticas", estadisticas);
+      localStorage.setItem("cookiesMarketing", marketing);
 
-    settings.remove();
-    cargarScriptsDeTerceros();
-  });
+      document.querySelector(".cookie-settings")?.remove();
+      cargarScriptsDeTerceros();
+    });
 
-  document.getElementById("cancel-cookie-settings").addEventListener("click", () => {
-    settings.remove();
+    document.getElementById("cancel-cookie-settings").addEventListener("click", () => {
+      document.querySelector(".cookie-settings")?.remove();
+    });
   });
 });
+
+
+

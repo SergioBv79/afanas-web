@@ -1385,3 +1385,187 @@ main.subpagina > section {
     line-height: 1.6;
   }
    
+
+
+  /* ========================================
+   RESPONSIVE DESIGN AFANAS EL PUERTO Y BAHÍA
+======================================== */
+
+/* Tablets (pantallas de hasta 1024px) */
+@media (max-width: 1024px) {
+  
+  /* Ajustes generales para tablet */
+  .menu-superior ul {
+    gap: 10px;
+  }
+
+  .menu-principal ul {
+    gap: 15px;
+  }
+
+  .frase {
+    font-size: 1.4rem;
+    padding: 12px 24px;
+  }
+}
+
+/* Móviles grandes (pantallas de hasta 768px) */
+@media (max-width: 768px) {
+  
+  /* Cabecera */
+  .menu-superior {
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 10px;
+  }
+
+  .menu-superior ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .menu-principal ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu-redes {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  @media (max-width: 768px) {
+
+    /* Cabecera superior */
+    .menu-superior {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 10px;
+    }
+  
+    .menu-superior ul {
+      flex-direction: column;
+      gap: 8px;
+      padding: 0;
+    }
+  
+    .menu-superior a {
+      font-size: 1em;
+      padding: 5px 0;
+    }
+  
+    .logo-superior img {
+      height: 70px; /* Logo más pequeño para móvil */
+      margin-bottom: 10px;
+    }
+  
+    /* Menú principal */
+    .menu-principal ul {
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+    }
+  
+    .menu-principal nav a {
+      font-size: 1.1em;
+      padding: 8px;
+    }
+  
+    /* Redes sociales */
+    .menu-redes {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+  
+    /* Botón galletita (cookies) */
+    .boton-cookies-flotante {
+      bottom: 20px;
+      right: 20px;
+    }
+  }
+  
+
+  /* Hero (carrusel) */
+  .frase {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+  }
+
+  /* Secciones */
+  .bloques-proyecto {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bloque {
+    max-width: 90%;
+  }
+
+  /* Footer */
+  .contenedor-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+@media (max-width: 768px) {
+
+  /* Carrusel - Hero */
+  .hero-carrusel {
+    height: 80vh; /* Reducimos altura en móviles */
+  }
+
+  .frase {
+    font-size: 1.2rem; /* Texto más pequeño */
+    padding: 10px 20px; /* Espacio alrededor más pequeño */
+    max-width: 90%; /* No ocupa todo el ancho */
+    word-break: break-word; /* Que el texto se corte bien si es largo */
+  }
+
+  .logo-central-afanas img {
+    max-width: 90px; /* Logo central más pequeño en móvil */
+  }
+}
+
+
+/* Móviles pequeños (pantallas de hasta 480px) */
+@media (max-width: 480px) {
+  
+  /* Hero */
+  .frase {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  /* Botones */
+  .boton, .boton-proyecto, .boton-descarga {
+    font-size: 1em;
+    padding: 10px 14px;
+  }
+
+  /* Footer textos */
+  .footer-info p,
+  .footer-enlaces ul,
+  .footer-copy {
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+
+  /* Hero */
+  .hero-carrusel {
+    height: 70vh;
+  }
+
+  .frase {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  .logo-central-afanas img {
+    max-width: 70px;
+  }
+}

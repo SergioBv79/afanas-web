@@ -137,3 +137,7 @@
   background-color: #f5a623;
   color: #fff;
 }
+/* Ocultar botón flotante en la página de política de cookies */
+body.politica-cookies #abrir-configuracion-cookies {
+  display: none;
+}
