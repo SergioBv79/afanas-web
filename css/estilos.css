@@ -1530,6 +1530,128 @@ main.subpagina > section {
   }
 }
 
+@media (max-width: 768px) {
+
+  /* Secciones generales tipo "El proyecto" */
+  .contenido, .contenido-filosofia, .bloques-proyecto, .lista-valores {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .quienes-somos .contenido,
+  .filosofia-afanas .contenido,
+  .equipo-afanas .bloque-equipo,
+  .seccion-mision .contenido,
+  .seccion-vision .contenido {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Ajuste para imágenes */
+  .contenido img,
+  .contenido-filosofia img,
+  .bloque-equipo img,
+  .bloques-proyecto img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Ajuste para bloques individuales */
+  .bloque, .valor {
+    max-width: 90%;
+    padding: 20px;
+  }
+}
+@media (max-width: 768px) {
+
+  /* Footer principal */
+  .contenedor-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer-info,
+  .footer-enlaces,
+  .footer-redes {
+    width: 100%;
+  }
+
+  .footer-enlaces ul {
+    padding: 0;
+  }
+
+  .footer-redes a {
+    font-size: 1.5em;
+    margin: 0 8px;
+  }
+
+  /* Footer copy */
+  .footer-copy {
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  /* Footer legal */
+  .footer-legal ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 768px) {
+
+  /* Espaciados generales */
+  main, section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* Márgenes entre secciones */
+  main > section, main.subpagina > section {
+    margin-bottom: 40px;
+  }
+
+  /* Títulos */
+  h1, h2 {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+  }
+
+  /* Párrafos */
+  p, li {
+    font-size: 1em;
+    line-height: 1.6;
+  }
+
+  /* Botones generales */
+  .boton, .boton-proyecto, .boton-descarga {
+    padding: 12px 20px;
+    font-size: 1.1em;
+  }
+
+  /* Listas */
+  ul {
+    padding-left: 20px;
+  }
+
+  /* Imágenes */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+}
 
 /* Móviles pequeños (pantallas de hasta 480px) */
 @media (max-width: 480px) {
