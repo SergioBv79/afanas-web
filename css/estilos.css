@@ -1386,14 +1386,12 @@ main.subpagina > section {
   }
    
 
-
-  /* ========================================
+/* ========================================
    RESPONSIVE DESIGN AFANAS EL PUERTO Y BAHÍA
 ======================================== */
 
 /* Tablets (pantallas de hasta 1024px) */
 @media (max-width: 1024px) {
-  
   /* Ajustes generales para tablet */
   .menu-superior ul {
     gap: 10px;
@@ -1409,131 +1407,77 @@ main.subpagina > section {
   }
 }
 
-/* Móviles grandes (pantallas de hasta 768px) */
+/* Móviles grandes y pequeños (pantallas de hasta 768px) */
 @media (max-width: 768px) {
-  
   /* Cabecera */
   .menu-superior {
     flex-direction: column;
     align-items: center;
-    padding: 8px 10px;
+    text-align: center;
+    padding: 10px;
   }
 
   .menu-superior ul {
     flex-direction: column;
-    align-items: center;
     gap: 8px;
+    padding: 0;
+  }
+
+  .menu-superior a {
+    font-size: 1em;
+    padding: 5px 0;
+  }
+
+  .logo-superior img {
+    height: 70px;
+    margin-bottom: 10px;
   }
 
   .menu-principal ul {
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .menu-principal nav a {
+    font-size: 1.1em;
+    padding: 8px;
   }
 
   .menu-redes {
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
   }
-  @media (max-width: 768px) {
 
-    /* Cabecera superior */
-    .menu-superior {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 10px;
-    }
-  
-    .menu-superior ul {
-      flex-direction: column;
-      gap: 8px;
-      padding: 0;
-    }
-  
-    .menu-superior a {
-      font-size: 1em;
-      padding: 5px 0;
-    }
-  
-    .logo-superior img {
-      height: 70px; /* Logo más pequeño para móvil */
-      margin-bottom: 10px;
-    }
-  
-    /* Menú principal */
-    .menu-principal ul {
-      flex-direction: column;
-      gap: 12px;
-      align-items: center;
-    }
-  
-    .menu-principal nav a {
-      font-size: 1.1em;
-      padding: 8px;
-    }
-  
-    /* Redes sociales */
-    .menu-redes {
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 10px;
-    }
-  
-    /* Botón galletita (cookies) */
-    .boton-cookies-flotante {
-      bottom: 20px;
-      right: 20px;
-    }
+  /* Botón galletita (cookies) */
+  .boton-cookies-flotante {
+    bottom: 20px;
+    right: 20px;
   }
-  
 
   /* Hero (carrusel) */
+  .hero-carrusel {
+    height: 80vh;
+  }
+
   .frase {
     font-size: 1.2rem;
     padding: 10px 20px;
-  }
-
-  /* Secciones */
-  .bloques-proyecto {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .bloque {
     max-width: 90%;
-  }
-
-  /* Footer */
-  .contenedor-footer {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-}
-@media (max-width: 768px) {
-
-  /* Carrusel - Hero */
-  .hero-carrusel {
-    height: 80vh; /* Reducimos altura en móviles */
-  }
-
-  .frase {
-    font-size: 1.2rem; /* Texto más pequeño */
-    padding: 10px 20px; /* Espacio alrededor más pequeño */
-    max-width: 90%; /* No ocupa todo el ancho */
-    word-break: break-word; /* Que el texto se corte bien si es largo */
+    word-break: break-word;
   }
 
   .logo-central-afanas img {
-    max-width: 90px; /* Logo central más pequeño en móvil */
+    max-width: 90px;
   }
-}
-
-@media (max-width: 768px) {
 
   /* Secciones generales tipo "El proyecto" */
-  .contenido, .contenido-filosofia, .bloques-proyecto, .lista-valores {
+  .contenido,
+  .contenido-filosofia,
+  .bloques-proyecto,
+  .lista-valores {
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -1549,7 +1493,6 @@ main.subpagina > section {
     align-items: center;
   }
 
-  /* Ajuste para imágenes */
   .contenido img,
   .contenido-filosofia img,
   .bloque-equipo img,
@@ -1558,15 +1501,13 @@ main.subpagina > section {
     height: auto;
   }
 
-  /* Ajuste para bloques individuales */
-  .bloque, .valor {
+  .bloque,
+  .valor {
     max-width: 90%;
     padding: 20px;
   }
-}
-@media (max-width: 768px) {
 
-  /* Footer principal */
+  /* Footer */
   .contenedor-footer {
     flex-direction: column;
     align-items: center;
@@ -1589,13 +1530,11 @@ main.subpagina > section {
     margin: 0 8px;
   }
 
-  /* Footer copy */
   .footer-copy {
     text-align: center;
     padding-top: 10px;
   }
 
-  /* Footer legal */
   .footer-legal ul {
     display: flex;
     flex-direction: column;
@@ -1603,22 +1542,22 @@ main.subpagina > section {
     align-items: center;
     margin-top: 20px;
   }
-}
-@media (max-width: 768px) {
 
   /* Espaciados generales */
-  main, section {
+  main,
+  section {
     padding-left: 15px;
     padding-right: 15px;
   }
 
-  /* Márgenes entre secciones */
-  main > section, main.subpagina > section {
+  main > section,
+  main.subpagina > section {
     margin-bottom: 40px;
   }
 
   /* Títulos */
-  h1, h2 {
+  h1,
+  h2 {
     font-size: 1.6em;
     margin-bottom: 20px;
   }
@@ -1629,13 +1568,16 @@ main.subpagina > section {
   }
 
   /* Párrafos */
-  p, li {
+  p,
+  li {
     font-size: 1em;
     line-height: 1.6;
   }
 
   /* Botones generales */
-  .boton, .boton-proyecto, .boton-descarga {
+  .boton,
+  .boton-proyecto,
+  .boton-descarga {
     padding: 12px 20px;
     font-size: 1.1em;
   }
@@ -1650,33 +1592,10 @@ main.subpagina > section {
     max-width: 100%;
     height: auto;
   }
-
 }
 
 /* Móviles pequeños (pantallas de hasta 480px) */
 @media (max-width: 480px) {
-  
-  /* Hero */
-  .frase {
-    font-size: 1rem;
-    padding: 8px 16px;
-  }
-
-  /* Botones */
-  .boton, .boton-proyecto, .boton-descarga {
-    font-size: 1em;
-    padding: 10px 14px;
-  }
-
-  /* Footer textos */
-  .footer-info p,
-  .footer-enlaces ul,
-  .footer-copy {
-    text-align: center;
-  }
-}
-@media (max-width: 480px) {
-
   /* Hero */
   .hero-carrusel {
     height: 70vh;
@@ -1689,5 +1608,20 @@ main.subpagina > section {
 
   .logo-central-afanas img {
     max-width: 70px;
+  }
+
+  /* Botones */
+  .boton,
+  .boton-proyecto,
+  .boton-descarga {
+    font-size: 1em;
+    padding: 10px 14px;
+  }
+
+  /* Footer textos */
+  .footer-info p,
+  .footer-enlaces ul,
+  .footer-copy {
+    text-align: center;
   }
 }
