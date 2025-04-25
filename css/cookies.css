@@ -115,3 +115,25 @@
   background-color: #ccc;
   color: #333;
 }
+
+
+.boton-cookies-flotante {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #0e3a60;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 12px 14px;
+  font-size: 1.2em;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  cursor: pointer;
+  z-index: 9999;
+  transition: background 0.3s ease;
+}
+
+.boton-cookies-flotante:hover {
+  background-color: #f5a623;
+  color: #fff;
+}
