@@ -794,23 +794,18 @@ body.subpagina p {
 body.subpagina main {
   padding-top: 225px
 }
-body.subpagina .menu-redes {
-  transition: transform 0.3s ease-in-out;
-}
 
-body.subpagina.scroll-down .menu-redes {
-  transform: translateY(-100%);
-}
-body.subpagina.scroll-down .menu-redes {
-  position: absolute;
+
+body.scroll-down .menu-redes {
   opacity: 0;
   height: 0;
-  overflow: hidden;
   padding: 0;
   margin: 0;
   transform: translateY(-100%);
+  overflow: hidden;
   pointer-events: none;
 }
+
 .fade-in-up {
   opacity: 0;
   transform: translateY(30px);
@@ -1288,7 +1283,105 @@ main.subpagina > section {
 
 
 
+/* =============================
+   ESTILO EXCLUSIVO para política de cookies
+   ============================= */
+
+   body.politica-cookies main.subpagina {
+    margin: 290px auto 100px; /* MÁS BAJO del top */
+    padding: 50px 35px; /* MÁS estrecho pero equilibrado */
+    max-width: 880px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  }
   
-
-
-
+  body.politica-cookies main.subpagina h1 {
+    font-size: 2.4em;
+    color: #0e3a60;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  body.politica-cookies main.subpagina blockquote {
+    background-color: #f4f9fc;
+    border-left: 5px solid #6cc2b3;
+    color: #0e3a60;
+    font-style: italic;
+    padding: 20px 30px;
+    border-radius: 10px;
+    margin: 30px auto 50px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    text-align: center;
+    max-width: 750px;
+  }
+  
+  body.politica-cookies main.subpagina h2 {
+    font-size: 1.5em;
+    color: #0e3a60;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    border-left: 4px solid #6cc2b3;
+    padding-left: 14px;
+  }
+  
+  body.politica-cookies main.subpagina p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  body.politica-cookies main.subpagina ul {
+    padding-left: 30px;
+    margin-bottom: 30px;
+  }
+  
+  body.politica-cookies main.subpagina ul li {
+    font-size: 1.05em;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    color: #444;
+    list-style-type: disc;
+  }
+  
+  body.politica-cookies main.subpagina a {
+    color: #0e3a60;
+    text-decoration: underline;
+    font-weight: 500;
+  }
+  
+  body.politica-cookies main.subpagina a:hover {
+    color: #f5a623;
+  }
+  
+  @media (max-width: 768px) {
+    body.politica-cookies main.subpagina {
+      padding: 40px 20px;
+      margin: 120px 20px 60px;
+    }
+  
+    body.politica-cookies main.subpagina h1 {
+      font-size: 2em;
+    }
+  
+    body.politica-cookies main.subpagina h2 {
+      font-size: 1.3em;
+    }
+  
+    body.politica-cookies main.subpagina p,
+    body.politica-cookies main.subpagina ul li {
+      font-size: 1em;
+    }
+  }
+  body.politica-cookies main.subpagina h1 {
+    border-left: none;
+    padding-left: 0;
+  }
+  body.politica-cookies main.subpagina blockquote {
+    font-size: 1.4em;
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1.6;
+  }
+   
