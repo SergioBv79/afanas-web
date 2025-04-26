@@ -10,6 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="logo-superior">
             <a href="../index.html" class="logo"><img src="../icons/Logo bandera (1).png" alt="Logo AFANAS"></a>
           </div>
+           <!-- 🔵 AQUÍ METO EL BOTÓN HAMBURGUESA PARA DISEÑO RESPONSIVE Y ZOOM-->
+  <button class="menu-hamburguesa" id="menu-hamburguesa" aria-label="Abrir menú">
+    ☰
+  </button>
           <ul>
             <li><a href="#"><i class="fas fa-newspaper"></i> Actualidad</a></li>
             <li><a href="#"><i class="fas fa-bullhorn"></i> Prensa</a></li>
@@ -88,4 +92,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const header = document.createElement("div");
   header.innerHTML = headerHTML;
   document.body.insertBefore(header, document.body.firstChild);
+});
+
+// 🔵 LÓGICA DEL BOTÓN HAMBURGUESA
+document.addEventListener('DOMContentLoaded', function () {
+  const botonHamburguesa = document.getElementById('menu-hamburguesa');
+  const menuPrincipal = document.querySelector('.menu-principal');
+
+  if (botonHamburguesa && menuPrincipal) {
+    botonHamburguesa.addEventListener('click', function () {
+      menuPrincipal.classList.toggle('activo');
+    });
+  }
 });

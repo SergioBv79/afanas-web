@@ -119,24 +119,44 @@
 
 .boton-cookies-flotante {
   position: fixed;
-  bottom: 25px;
-  right: 25px;
+  top: 10px;
+  right: 70px;
+  width: 50px; /* 🔵 Tamaño fijo */
+  height: 50px; /* 🔵 Tamaño fijo */
   background-color: #0e3a60;
   color: white;
   border: none;
   border-radius: 50%;
-  padding: 12px 14px;
-  font-size: 1.2em;
+  font-size: 1.8rem;
+  display: flex; /* 🔵 Centrar contenido */
+  align-items: center;
+  justify-content: center;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   cursor: pointer;
-  z-index: 9999;
-  transition: background 0.3s ease;
+  z-index: 10000;
+  transition: background-color 0.3s ease;
 }
 
 .boton-cookies-flotante:hover {
   background-color: #f5a623;
-  color: #fff;
+  color: white;
 }
+/* ADAPTACION RESPONSIVE */
+@media (max-width: 768px) {
+  .boton-cookies-flotante {
+    right: auto; /* 🔵 Mover a la izquierda */
+    left: 10px;
+    top: 80px;
+    width: 30px; /* 🔵 Más pequeño */
+    height: 30px; /* 🔵 Más pequeño */
+    font-size: 1rem; /* 🔵 Icono más pequeño */
+  }
+}
+
+
+
+
+
 /* Ocultar botón flotante en la página de política de cookies */
 body.politica-cookies #abrir-configuracion-cookies {
   display: none;

@@ -285,14 +285,13 @@ main {
 }
 .frase {
   position: absolute;
-  top: 50%;
+  top: 40%; /* 🔵 Antes 40% — ahora subimos la frase */
   left: 50%;
-  transform: translate(-50%, -40%);
-  opacity: 0;
-  background-color: rgba(255, 255, 255, 0.8); /* fondo claro */
-  color: #0e3a60; /* azul AFANAS */
-  padding: 14px 28px;
-  font-size: 1.6rem;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #0e3a60;
+  padding: 10px 20px; /* 🔵 Ajustamos un poco */
+  font-size: 1.5rem; /* 🔵 Reducimos tamaño (antes 1.8rem) */
   font-weight: 600;
   border-radius: 20px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.2);
@@ -303,27 +302,30 @@ main {
   font-family: 'Poppins', sans-serif;
 }
 
+
 .frase-principal {
   animation: fraseDesciende 2s ease-in-out forwards;
 }
 
 .slide.active .frase {
-  animation: aparecerFlotando 1.2s ease-out forwards;
+  animation: aparecerFlotando 2.2s ease-out forwards;
 }
 
 .prev, .next {
   position: absolute;
-  top: 50%;
+  top: 40%; /* 🔵 Antes 50% → ahora 40%, subimos las flechas */
   transform: translateY(-50%);
   background-color: rgba(0,0,0,0.5);
   color: white;
-  font-size: 30px;
+  font-size: 28px; /* 🔵 Opcional: un poquito más pequeñas */
   border: none;
-  padding: 10px 15px;
+  padding: 8px 12px;
   cursor: pointer;
   z-index: 2;
   border-radius: 50%;
+  transition: background-color 0.3s ease;
 }
+
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
@@ -1419,13 +1421,20 @@ main.subpagina > section {
 
   .menu-superior ul {
     flex-direction: column;
-    gap: 8px;
+    align-items: center;
+    gap: 10px;
     padding: 0;
+    margin-top: 10px;
   }
-
+  .menu-superior ul li {
+    width: 100%;
+    text-align: center;
+  }
   .menu-superior a {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
     font-size: 1em;
-    padding: 5px 0;
   }
 
   .logo-superior img {
@@ -1593,6 +1602,45 @@ main.subpagina > section {
     height: auto;
   }
 }
+/* BOTÓN HAMBURGUESA */
+.menu-hamburguesa {
+  display: none; /* 🔵 Oculto en escritorio */
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #0e3a60;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 10000;
+}
+
+@media (max-width: 768px) {
+
+  .menu-hamburguesa {
+    display: block; /* 🔵 Mostrar en móvil */
+  }
+
+  /* 🔵 SOLO AFECTA AL MENU PRINCIPAL */
+  .menu-principal {
+    display: none; /* 🔵 Ocultar por defecto en móvil */
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    top: 80px; /* 🔵 Ajusta si tu cabecera es más alta o más baja */
+    left: 0;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+
+  .menu-principal.activo {
+    display: flex; /* 🔵 Mostrar cuando hagas clic */
+  }
+}
 
 /* Móviles pequeños (pantallas de hasta 480px) */
 @media (max-width: 480px) {
@@ -1625,3 +1673,4 @@ main.subpagina > section {
     text-align: center;
   }
 }
+
