@@ -98,10 +98,12 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener('DOMContentLoaded', function () {
   const botonHamburguesa = document.getElementById('menu-hamburguesa');
   const menuPrincipal = document.querySelector('.menu-principal');
+  const menuSuperior = document.querySelector('.menu-superior');
 
-  if (botonHamburguesa && menuPrincipal) {
+  if (botonHamburguesa && menuPrincipal && menuSuperior) {
     botonHamburguesa.addEventListener('click', function () {
       menuPrincipal.classList.toggle('activo');
+      menuSuperior.classList.toggle('activo'); // 🔵 También ocultamos/mostramos menú superior
     });
   }
 });

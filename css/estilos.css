@@ -1611,7 +1611,7 @@ main.subpagina > section {
   color: #0e3a60;
   cursor: pointer;
   position: absolute;
-  top: 15px;
+  top: 25px;
   right: 15px;
   z-index: 10000;
 }
@@ -1641,6 +1641,27 @@ main.subpagina > section {
     display: flex; /* 🔵 Mostrar cuando hagas clic */
   }
 }
+@media (max-width: 768px) {
+  .menu-superior {
+    display: none; /* 🔵 Oculto por defecto en móvil */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    top: 70px; /* debajo del banner */
+    left: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+
+  .menu-superior.activo {
+    display: flex; /* 🔵 Se muestra cuando hacemos clic */
+  }
+}
+
 
 /* Móviles pequeños (pantallas de hasta 480px) */
 @media (max-width: 480px) {
