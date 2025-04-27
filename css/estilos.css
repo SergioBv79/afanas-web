@@ -1612,7 +1612,7 @@ main.subpagina > section {
   cursor: pointer;
   position: absolute;
   top: 25px;
-  right: 15px;
+  right: 15px;s
   z-index: 10000;
 }
 
