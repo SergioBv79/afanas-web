@@ -5,15 +5,16 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="banner-top">
         <i class="fas fa-heart" aria-hidden="true"></i> “Creemos en las personas. Apostamos por sus capacidades.”
       </div>
+       <!-- 🔵 AQUÍ METO EL BOTÓN HAMBURGUESA PARA DISEÑO RESPONSIVE Y ZOOM-->
+  <button class="menu-hamburguesa" id="menu-hamburguesa" aria-label="Abrir menú">
+    ☰
+  </button>
       <div class="cabecera-contenido">
         <div class="menu-superior">
           <div class="logo-superior">
             <a href="../index.html" class="logo"><img src="../icons/Logo bandera (1).png" alt="Logo AFANAS"></a>
           </div>
-           <!-- 🔵 AQUÍ METO EL BOTÓN HAMBURGUESA PARA DISEÑO RESPONSIVE Y ZOOM-->
-  <button class="menu-hamburguesa" id="menu-hamburguesa" aria-label="Abrir menú">
-    ☰
-  </button>
+          
           <ul>
             <li><a href="#"><i class="fas fa-newspaper"></i> Actualidad</a></li>
             <li><a href="#"><i class="fas fa-bullhorn"></i> Prensa</a></li>
@@ -94,16 +95,13 @@ document.addEventListener("DOMContentLoaded", function () {
   document.body.insertBefore(header, document.body.firstChild);
 });
 
-// 🔵 LÓGICA DEL BOTÓN HAMBURGUESA
 document.addEventListener('DOMContentLoaded', function () {
   const botonHamburguesa = document.getElementById('menu-hamburguesa');
-  const menuPrincipal = document.querySelector('.menu-principal');
   const menuSuperior = document.querySelector('.menu-superior');
+  const menuPrincipal = document.querySelector('.menu-principal');
 
-  if (botonHamburguesa && menuPrincipal && menuSuperior) {
-    botonHamburguesa.addEventListener('click', function () {
-      menuPrincipal.classList.toggle('activo');
-      menuSuperior.classList.toggle('activo'); // 🔵 También ocultamos/mostramos menú superior
-    });
-  }
+  botonHamburguesa.addEventListener('click', function () {
+    menuSuperior.classList.toggle('activo');
+    menuPrincipal.classList.toggle('activo');
+  });
 });

@@ -1596,74 +1596,86 @@ main.subpagina > section {
     height: auto;
   }
 }
-/* BOTÓN HAMBURGUESA */
+
+/* ========================================
+   RESPONSIVE DESIGN - CABECERA Y COOKIES
+======================================== */
+
+/* Botón hamburguesa */
 .menu-hamburguesa {
-  display: none; /* 🔵 Oculto en escritorio */
+  display: none;
   font-size: 2rem;
   background: none;
   border: none;
   color: #0e3a60;
   cursor: pointer;
   position: absolute;
-  top: 25px;
-  right: 15px;
+  top: 16px;
+  right: 16px;
   z-index: 10000;
 }
 
 @media (max-width: 768px) {
-
   .menu-hamburguesa {
-    display: block; /* 🔵 Mostrar en móvil */
+    display: block;
   }
 
-  /* 🔵 SOLO AFECTA AL MENU PRINCIPAL */
+  /* Menú principal (desplegable al pulsar) */
   .menu-principal {
-    display: none; /* 🔵 Ocultar por defecto en móvil */
+    display: none;
     flex-direction: column;
     align-items: center;
     background-color: white;
     width: 100%;
     position: absolute;
-    top: 80px; /* 🔵 Ajusta si tu cabecera es más alta o más baja */
+    top: 120px; /* Justo debajo del banner y logo */
     left: 0;
     padding: 20px 0;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
   }
 
   .menu-principal.activo {
-    display: flex; /* 🔵 Mostrar cuando hagas clic */
+    display: flex;
   }
-}
-@media (max-width: 768px) {
+
+  /* Menú superior (desplegable también) */
   .menu-superior {
-    display: none; /* 🔵 Oculto por defecto en móvil */
+    display: none;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    padding: 10px;
     background-color: white;
     width: 100%;
     position: absolute;
-    top: 70px; /* debajo del banner */
+    top: 70px; /* debajo del banner naranja */
     left: 0;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     z-index: 999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
 
   .menu-superior.activo {
-    display: flex; /* 🔵 Se muestra cuando hacemos clic */
+    display: flex;
   }
 }
 
+/* Botón galletita (cookies) en móvil */
+@media (max-width: 768px) {
+  .boton-cookies-flotante {
+    top: 18px;
+    left: 16px;
+    width: 45px;
+    height: 45px;
+    font-size: 10px;
+    right: auto; /* anulamos el right que tenías */
+  }
+}
 
-/* Móviles pequeños (pantallas de hasta 480px) */
+/* Ajuste general a partir de 480px */
 @media (max-width: 480px) {
-  /* Hero */
   .hero-carrusel {
     height: 70vh;
   }
-
+  
   .frase {
     font-size: 1rem;
     padding: 8px 16px;
@@ -1672,29 +1684,46 @@ main.subpagina > section {
   .logo-central-afanas img {
     max-width: 70px;
   }
-
-  /* Botones */
-  .boton,
-  .boton-proyecto,
-  .boton-descarga {
-    font-size: 1em;
-    padding: 10px 14px;
-  }
-
-  /* Footer textos */
-  .footer-info p,
-  .footer-enlaces ul,
-  .footer-copy {
-    text-align: center;
-  }
+}
+/* ==========================
+   BOTÓN HAMBURGUESA en móvil
+=========================== */
+.menu-hamburguesa {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #0e3a60;
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 10000;
 }
 
+/* Mostrar en móvil */
 @media (max-width: 768px) {
-  .boton-cookies-flotante {
-    top: 16px;
-    right: 16px;
-    width: 45px;
-    height: 45px;
-    font-size: 20px;
+  .menu-hamburguesa {
+    display: block;
+  }
+
+  .menu-superior,
+  .menu-principal {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 999;
+    position: absolute;
+    top: 60px; /* debajo del banner naranja */
+    left: 0;
+  }
+
+  .menu-superior.activo,
+  .menu-principal.activo {
+    display: flex;
   }
 }
