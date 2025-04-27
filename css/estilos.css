@@ -1460,12 +1460,6 @@ main.subpagina > section {
     margin-top: 10px;
   }
 
-  /* Botón galletita (cookies) */
-  .boton-cookies-flotante {
-    bottom: 20px;
-    right: 20px;
-  }
-
   /* Hero (carrusel) */
   .hero-carrusel {
     height: 80vh;
@@ -1612,7 +1606,7 @@ main.subpagina > section {
   cursor: pointer;
   position: absolute;
   top: 25px;
-  right: 15px;s
+  right: 15px;
   z-index: 10000;
 }
 
@@ -1695,3 +1689,12 @@ main.subpagina > section {
   }
 }
 
+@media (max-width: 768px) {
+  .boton-cookies-flotante {
+    top: 16px;
+    right: 16px;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+}
