@@ -1658,18 +1658,6 @@ main.subpagina > section {
   }
 }
 
-/* Botón galletita (cookies) en móvil */
-@media (max-width: 768px) {
-  .boton-cookies-flotante {
-    top: 18px;
-    left: 16px;
-    width: 45px;
-    height: 45px;
-    font-size: 10px;
-    right: auto; /* anulamos el right que tenías */
-  }
-}
-
 /* Ajuste general a partir de 480px */
 @media (max-width: 480px) {
   .hero-carrusel {
@@ -1696,7 +1684,7 @@ main.subpagina > section {
   color: #0e3a60;
   cursor: pointer;
   position: absolute;
-  top: 16px;
+  top: 23px;
   right: 16px;
   z-index: 10000;
 }
