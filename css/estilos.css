@@ -1715,3 +1715,344 @@ main.subpagina > section {
     display: flex;
   }
 }
+
+
+
+
+
+
+/* ===== MENÚ RESPONSIVE TIPO LA FAGEDA ===== */
+#menu-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: white;
+  z-index: 10001;
+  padding: 40px 20px;
+  overflow-y: auto;
+  animation: fadeIn 0.3s ease;
+}
+
+#menu-overlay.activo {
+  display: block;
+}
+
+.menu-overlay-contenido {
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+}
+
+.menu-overlay-contenido button {
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  color: #0e3a60;
+  float: right;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.menu-overlay-contenido ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 60px;
+}
+
+.menu-overlay-contenido li {
+  margin: 20px 0;
+}
+
+.menu-overlay-contenido a {
+  text-decoration: none;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #0e3a60;
+  transition: color 0.3s ease;
+}
+
+.menu-overlay-contenido a:hover {
+  color: #f5a623;
+}
+
+.logo-menu-responsive {
+  margin-bottom: 20px;
+}
+
+.logo-menu-responsive img {
+  max-width: 160px;
+}
+
+
+/* ==== MENÚ RESPONSIVE ESTILO LA FAGEDA ==== */
+#menu-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: white;
+  z-index: 10001;
+  padding: 40px 20px;
+  overflow-y: auto;
+  animation: fadeIn 0.3s ease;
+}
+
+#menu-overlay.activo {
+  display: block;
+}
+
+.menu-overlay-contenido {
+  max-width: 500px;
+  margin: auto;
+  padding-top: 20px;
+}
+
+#cerrar-menu-overlay {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #0e3a60;
+  float: right;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.menu-principal-responsive,
+.menu-secundario-responsive {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-principal-responsive li,
+.menu-secundario-responsive li {
+  margin: 16px 0;
+  font-size: 1.2em;
+}
+
+.menu-principal-responsive a,
+.menu-secundario-responsive a {
+  text-decoration: none;
+  color: #0e3a60;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+.menu-principal-responsive a:hover,
+.menu-secundario-responsive a:hover {
+  color: #f5a623;
+}
+
+.separador-menu-responsive {
+  border: none;
+  height: 2px;
+  background: #e0e0e0;
+  margin: 30px 0;
+}
+
+
+/* ==== MENÚ RESPONSIVE VISUAL LA FAGEDA === */
+#menu-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: white;
+  z-index: 10001;
+  overflow-y: auto;
+}
+
+#menu-overlay.activo {
+  display: block;
+}
+
+.menu-overlay-contenido {
+  margin-top: 40px;
+  padding: 10px 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.cabecera-menu-responsive {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.cabecera-menu-responsive img {
+  max-height: 50px;
+}
+
+.frase-responsive {
+  flex: 1;
+  font-size: 0.9em;
+  color: #0e3a60;
+  font-weight: bold;
+}
+
+#cerrar-menu-overlay {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #0e3a60;
+  cursor: pointer;
+}
+
+.menu-principal-responsive,
+.menu-secundario-responsive {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-principal-responsive li,
+.menu-secundario-responsive li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 18px 0;
+  font-size: 1.1em;
+}
+
+.menu-principal-responsive a,
+.menu-secundario-responsive a {
+  text-decoration: none;
+  color: #0e3a60;
+  font-weight: 600;
+  flex: 1;
+}
+
+.flecha {
+  font-size: 1.2em;
+  color: #f5a623;
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+
+.separador-menu-responsive {
+  margin: 30px 0;
+  height: 1px;
+  background-color: #ccc;
+  border: none;
+}
+
+.banner-responsive {
+  background-color: #f5a623;
+  color: white;
+  text-align: center;
+  font-size: 1em;
+  padding: 12px 16px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10002;
+}
+
+
+
+.logo-menu-responsive {
+  text-align: center;
+  margin: 5px 0 15px;
+}
+
+
+.logo-menu-responsive img {
+  max-height: 85px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+.menu-principal-responsive,
+.menu-secundario-responsive {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  padding-left: 0;
+}
+
+
+.menu-principal-responsive li,
+.menu-secundario-responsive li {
+  margin: 16px 0;
+}
+
+.menu-principal-responsive .desplegable {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #0e3a60;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px 0 8px 4px;
+  gap: 10px;
+}
+
+
+.menu-secundario-responsive a {
+  font-size: 1em;
+  font-weight: normal;
+  color: #0e3a60;
+  text-decoration: none;
+}
+
+.menu-secundario-responsive a:hover {
+  color: #f5a623;
+}
+
+.submenu-responsive {
+  display: none;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  padding-left: 16px;
+  background-color: #fdf9f2;
+  border-left: 3px solid #f5a623;
+  padding: 12px;
+  border-radius: 6px;
+  animation: fadeInSub 0.3s ease-in-out;
+}
+
+
+@keyframes fadeInSub {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.submenu-responsive li {
+  font-size: 0.95em;
+  font-weight: 500;
+  margin: 8px 0;
+}
+
+.submenu-responsive a {
+  text-decoration: none;
+  color: #0e3a60;
+  transition: color 0.2s ease;
+}
+
+.submenu-responsive a:hover {
+  color: #f5a623;
+}
+
+
+.flecha {
+  margin-left: 6px;
+  font-weight: bold;
+  color: #0e3a60;
+}

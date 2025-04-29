@@ -93,15 +93,101 @@ document.addEventListener("DOMContentLoaded", function () {
   const header = document.createElement("div");
   header.innerHTML = headerHTML;
   document.body.insertBefore(header, document.body.firstChild);
+
+
+     // 🔵 Crear menú responsive full screen
+  const menuOverlay = document.createElement('div');
+  menuOverlay.id = 'menu-overlay';
+  menuOverlay.innerHTML = `
+  <div class="banner-responsive">“Creemos en las personas. Apostamos por sus capacidades.”</div>
+  <div class="menu-overlay-contenido">
+    <div class="cabecera-menu-responsive">
+      <div class="logo-menu-responsive">
+        <img src="../icons/Logo bandera (1).png" alt="Logotipo AFANAS">
+      </div>
+      <button id="cerrar-menu-overlay" aria-label="Cerrar menú">✕</button>
+    </div>
+
+    <ul class="menu-principal-responsive">
+      <li class="item-con-submenu">
+        <span class="desplegable">El proyecto <span class="flecha flecha-desplegable">&#62;</span></span>
+
+        <ul class="submenu-responsive">
+          <li><a href="../proyecto/quienes-somos.html">Quiénes somos</a></li>
+          <li><a href="../proyecto/mision-vision.html">Misión, Visión y Valores</a></li>
+          <li><a href="../proyecto/historia.html">Historia</a></li>
+          <li><a href="../proyecto/transparencia.html">Transparencia</a></li>
+          <li><a href="../proyecto/equipo.html">Equipo</a></li>
+        </ul>
+      </li>
+      <li><span class="desplegable">Ámbito social <span class="flecha">&#62;</span></span></li>
+      <li><span class="desplegable">Ámbito empresarial <span class="flecha">&#62;</span></span></li>
+      <li><span class="desplegable">Visitas <span class="flecha">&#62;</span></span></li>
+      <li><span class="desplegable">Colabora con nosotros <span class="flecha">&#62;</span></span></li>
+      <li><span class="desplegable">RSC y Sostenibilidad <span class="flecha">&#62;</span></span></li>
+      <li><span class="desplegable">Tienda online <span class="flecha">&#62;</span></span></li>
+    </ul>
+
+    <hr class="separador-menu-responsive" />
+
+    <ul class="menu-secundario-responsive">
+      <li><a href="#">Actualidad</a></li>
+      <li><a href="#">Prensa</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Pertenecemos a</a></li>
+      <li><a href="#">Premios y reconocimientos</a></li>
+      <li><a href="#">Contacto</a></li>
+      <li><a href="#">Trabaja con nosotros</a></li>
+    </ul>
+  </div>
+`;
+
+
+  document.body.appendChild(menuOverlay);
+
+  
 });
 
 document.addEventListener('DOMContentLoaded', function () {
   const botonHamburguesa = document.getElementById('menu-hamburguesa');
-  const menuSuperior = document.querySelector('.menu-superior');
-  const menuPrincipal = document.querySelector('.menu-principal');
+  const menuOverlay = document.getElementById('menu-overlay');
+  const cerrarBtn = document.getElementById('cerrar-menu-overlay');
 
   botonHamburguesa.addEventListener('click', function () {
-    menuSuperior.classList.toggle('activo');
-    menuPrincipal.classList.toggle('activo');
+    menuOverlay.classList.add('activo');
+  });
+
+
+  document.addEventListener("click", function (e) {
+    if (e.target.classList.contains("desplegable") || e.target.closest('.desplegable')) {
+      const target = e.target.closest('.desplegable');
+      const submenu = target.nextElementSibling;
+      const flecha = target.querySelector(".flecha-desplegable");
+      const isVisible = submenu.style.display === "block";
+  
+      // Cierra todos los submenús
+      document.querySelectorAll(".submenu-responsive").forEach(s => s.style.display = "none");
+      // Muestra todas las flechas
+      document.querySelectorAll(".flecha-desplegable").forEach(f => f.style.visibility = "visible");
+  
+      if (!isVisible) {
+        submenu.style.display = "block";
+        if (flecha) flecha.style.visibility = "hidden";
+      }
+    }
+  });
+  
+  
+  
+
+
+  
+  cerrarBtn.addEventListener('click', function () {
+    menuOverlay.classList.remove('activo');
   });
 });
+
+
+
+
+
