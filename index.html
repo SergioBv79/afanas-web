@@ -6,23 +6,18 @@
   <title>AFANAS El Puerto y Bahía | Residencias, Educación Especial, Empleo y Apoyos Sociales</title>
 
   <meta name="description" content="AFANAS El Puerto y Bahía es un referente en atención a personas mayores con Alzheimer y demencias, personas con discapacidad intelectual, menores en protección y educación especial. Gestionamos servicios de residencias, centros de día, empleo protegido y servicios deportivos. Conócenos.">
-
   <meta name="keywords" content="AFANAS, residencia mayores Alzheimer, residencias de mayores DEmencias, discapacidad intelectual, centros de día, centros ocupacionales, educación especial, atención temprana, empleo protegido, centro especial de empleo, lavandería industrial, restaurante social, granja avícola, complejos deportivos, protección de menores, CIMI menores infractores, Cádiz, El Puerto de Santa María">
-
   <meta name="robots" content="index, follow">
-
   <meta name="author" content="AFANAS El Puerto y Bahía">
 
   <meta property="og:title" content="AFANAS El Puerto y Bahía | Servicios redenciales, centros de dia y centros ocupacionales, Educación Especial, Empleo inclusivo y Apoyos Sociales">
   <meta property="og:description" content="Prestamos servicios y apoyos a personas con discapacidad intelectual, a personas mayores con Alzheimer y otras demencias, menores en riesgo y promovemos empleo inclusivo y socialmente responsable. Conoce nuestros centros y servicios.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_ES">
-  <meta property="og:url" content="https://www.afanaspuertoybahia.es/"> <!-- 🔵 Cambiar cuando publiques tu dominio -->
-  <meta property="og:image" content= "img/og-image.jpg"> <!-- 🔵 Poner aquí tu imagen destacada. 👉 sube una imagen representativa (puede ser el logo o una foto bonita),
-  por ejemplo og-image.jpg. Medida recomendada: 1200x630 px. Pesa poco (ideal: menos de 200 KB) -->
+  <meta property="og:url" content="https://www.afanaspuertoybahia.es/">
+  <meta property="og:image" content="img/og-image.jpg">
   <meta property="og:image:alt" content="AFANAS El Puerto y Bahía logo">
 
-  
   <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="icons/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="icons/favicons/favicon-16x16.png">
@@ -31,24 +26,18 @@
   <link rel="icon" type="image/png" sizes="512x512" href="icons/favicons/web-app-manifest-512x512.png">
   <!-- <link rel="manifest" href="./icons/favicons/site.webmanifest"> -->
 
-
   <meta name="theme-color" content="#0e3a60" />
 
-  <!-- Font Awesome -->
+  <!-- Font Awesome + Google Fonts + CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilos.css" />
-  <link rel="stylesheet" href="css/cookies.css">
-
+  <link rel="stylesheet" href="css/cookies.css" />
 </head>
 
 <body>
   <div id="header-container"></div>
-  <script src="js/header.js"></script>
 
-
-
- 
   <main>
     <section id="inicio" class="hero-carrusel">
       <div class="slider-container">
@@ -60,7 +49,7 @@
               <img src="icons/logo blanco.png" alt="Logotipo AFANAS">
             </div>
           </div>
-          
+
           <div class="slide">
             <img src="img/fotos carrusell/istockphoto-1347625803-1024x1024.jpg" alt="Educación e inclusión" />
             <div class="frase">Cada persona cuenta. Cada apoyo transforma.</div>
@@ -82,7 +71,6 @@
             <div class="frase">Aspiramos a ser una de las mejores Asociaciones con las personas.</div>
           </div>
         </div>
-        <!-- Flechas de control -->
         <button class="prev" onclick="moverSlide(-1)">&#10094;</button>
         <button class="next" onclick="moverSlide(1)">&#10095;</button>
       </div>
@@ -92,7 +80,7 @@
       <div class="contenedor">
         <h2 style="margin-bottom: 30px;">El proyecto</h2>
         <p>Descubre más sobre quiénes somos, nuestra historia, misión, visión y el equipo que hace posible nuestra labor.</p>
-        
+
         <div class="botones-proyecto">
           <a class="boton-proyecto" href="proyecto/quienes-somos.html">Quiénes somos</a>
           <a class="boton-proyecto" href="proyecto/mision-vision.html">Misión, Visión y Valores</a>
@@ -102,21 +90,21 @@
         </div>
       </div>
     </section>
-   </div>
-</section>
   </main>
-  
-  
-  <script src="js/script.js"></script>
+
   <div id="footer-container"></div>
-<script src="../js/footer.js"></script>
-<div id="cookie-banner-container"></div>
-<div id="cookie-settings-container"></div>
-<script src="js/cookies.js"></script>
+  <div id="cookie-banner-container"></div>
+  <div id="cookie-settings-container"></div>
 
-<button id="abrir-configuracion-cookies" class="boton-cookies-flotante" title="Cambiar configuración de cookies">
-  <i class="fas fa-cookie-bite"></i>
-</button>
+  <!-- JS Scripts -->
+  <script src="js/header.js" defer></script>
+  <script src="js/footer.js" defer></script>
+  <script src="js/cookies.js" defer></script>
+  <script src="js/script.js" defer></script>
 
+  <!-- Botón configuración cookies -->
+  <button id="abrir-configuracion-cookies" class="boton-cookies-flotante" title="Cambiar configuración de cookies">
+    <i class="fas fa-cookie-bite"></i>
+  </button>
 </body>
 </html>
