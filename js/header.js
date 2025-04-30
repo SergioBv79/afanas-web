@@ -5,16 +5,14 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="banner-top">
         <i class="fas fa-heart" aria-hidden="true"></i> “Creemos en las personas. Apostamos por sus capacidades.”
       </div>
-       <!-- 🔵 AQUÍ METO EL BOTÓN HAMBURGUESA PARA DISEÑO RESPONSIVE Y ZOOM-->
-  <button class="menu-hamburguesa" id="menu-hamburguesa" aria-label="Abrir menú">
-    ☰
-  </button>
+      <button class="menu-hamburguesa" id="menu-hamburguesa" aria-label="Abrir menú">
+        ☰
+      </button>
       <div class="cabecera-contenido">
         <div class="menu-superior">
           <div class="logo-superior">
             <a href="../index.html" class="logo"><img src="../icons/Logo bandera (1).png" alt="Logo AFANAS"></a>
           </div>
-          
           <ul>
             <li><a href="#"><i class="fas fa-newspaper"></i> Actualidad</a></li>
             <li><a href="#"><i class="fas fa-bullhorn"></i> Prensa</a></li>
@@ -90,37 +88,37 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
     </header>
   `;
+
   const header = document.createElement("div");
   header.innerHTML = headerHTML;
   document.body.insertBefore(header, document.body.firstChild);
 
-
-     // 🔵 Crear menú responsive full screen
   const menuOverlay = document.createElement('div');
   menuOverlay.id = 'menu-overlay';
+
+  const esIndex = window.location.pathname.endsWith("index.html") || window.location.pathname === "/";
+  const ruta = esIndex ? "" : "../";
+
   menuOverlay.innerHTML = `
   <div class="banner-responsive">“Creemos en las personas. Apostamos por sus capacidades.”</div>
   <div class="menu-overlay-contenido">
     <div class="cabecera-menu-responsive">
       <div class="logo-menu-responsive">
-  <a href="../index.html">
-    <img src="../icons/Logo bandera (1).png" alt="Logotipo AFANAS">
-  </a>
-</div>
-
+        <a href="${ruta}index.html">
+          <img src="${ruta}icons/Logo bandera (1).png" alt="Logotipo AFANAS">
+        </a>
+      </div>
       <button id="cerrar-menu-overlay" aria-label="Cerrar menú">✕</button>
     </div>
-
     <ul class="menu-principal-responsive">
       <li class="item-con-submenu">
         <span class="desplegable">El proyecto <span class="flecha flecha-desplegable">&#62;</span></span>
-
         <ul class="submenu-responsive">
-          <li><a href="../proyecto/quienes-somos.html">Quiénes somos</a></li>
-          <li><a href="../proyecto/mision-vision.html">Misión, Visión y Valores</a></li>
-          <li><a href="../proyecto/historia.html">Historia</a></li>
-          <li><a href="../proyecto/transparencia.html">Transparencia</a></li>
-          <li><a href="../proyecto/equipo.html">Equipo</a></li>
+          <li><a href="${ruta}proyecto/quienes-somos.html">Quiénes somos</a></li>
+          <li><a href="${ruta}proyecto/mision-vision.html">Misión, Visión y Valores</a></li>
+          <li><a href="${ruta}proyecto/historia.html">Historia</a></li>
+          <li><a href="${ruta}proyecto/transparencia.html">Transparencia</a></li>
+          <li><a href="${ruta}proyecto/equipo.html">Equipo</a></li>
         </ul>
       </li>
       <li><span class="desplegable">Ámbito social <span class="flecha">&#62;</span></span></li>
@@ -130,9 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <li><span class="desplegable">RSC y Sostenibilidad <span class="flecha">&#62;</span></span></li>
       <li><span class="desplegable">Tienda online <span class="flecha">&#62;</span></span></li>
     </ul>
-
     <hr class="separador-menu-responsive" />
-
     <ul class="menu-secundario-responsive">
       <li><a href="#">Actualidad</a></li>
       <li><a href="#">Prensa</a></li>
@@ -142,13 +138,9 @@ document.addEventListener("DOMContentLoaded", function () {
       <li><a href="#">Contacto</a></li>
       <li><a href="#">Trabaja con nosotros</a></li>
     </ul>
-  </div>
-`;
-
+  </div>`;
 
   document.body.appendChild(menuOverlay);
-
-  
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -160,37 +152,24 @@ document.addEventListener('DOMContentLoaded', function () {
     menuOverlay.classList.add('activo');
   });
 
-
   document.addEventListener("click", function (e) {
     if (e.target.classList.contains("desplegable") || e.target.closest('.desplegable')) {
       const target = e.target.closest('.desplegable');
       const submenu = target.nextElementSibling;
       const flecha = target.querySelector(".flecha-desplegable");
       const isVisible = submenu.style.display === "block";
-  
-      // Cierra todos los submenús
+
       document.querySelectorAll(".submenu-responsive").forEach(s => s.style.display = "none");
-      // Muestra todas las flechas
       document.querySelectorAll(".flecha-desplegable").forEach(f => f.style.visibility = "visible");
-  
+
       if (!isVisible) {
         submenu.style.display = "block";
         if (flecha) flecha.style.visibility = "hidden";
       }
     }
   });
-  
-  
-  
 
-
-  
   cerrarBtn.addEventListener('click', function () {
     menuOverlay.classList.remove('activo');
   });
 });
-
-
-
-
-
