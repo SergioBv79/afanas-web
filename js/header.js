@@ -103,8 +103,11 @@ document.addEventListener("DOMContentLoaded", function () {
   <div class="menu-overlay-contenido">
     <div class="cabecera-menu-responsive">
       <div class="logo-menu-responsive">
-        <img src="../icons/Logo bandera (1).png" alt="Logotipo AFANAS">
-      </div>
+  <a href="../index.html">
+    <img src="../icons/Logo bandera (1).png" alt="Logotipo AFANAS">
+  </a>
+</div>
+
       <button id="cerrar-menu-overlay" aria-label="Cerrar menú">✕</button>
     </div>
 
