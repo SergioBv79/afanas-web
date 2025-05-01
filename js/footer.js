@@ -1,5 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
+  const base = location.pathname.includes("/proyecto/") || location.pathname.includes("/politica") || location.pathname.includes("/aviso") || location.pathname.includes("/accesibilidad") ? "../" : "";
+
   const bloqueMapa = `
   <div class="footer-mapa" style="margin-top: 20px;">
     <a href="https://www.google.com/maps/place/Calle+Embalse,+s%2Fn,+11500+El+Puerto+de+Santa+Mar%C3%ADa,+C%C3%A1diz" 
@@ -24,10 +26,10 @@ const footerHTML = `
     </div>
     <div class="footer-enlaces">
       <ul>
-        <li><a href="../politica-privacidad.html">Política de privacidad</a></li>
-        <li><a href="../politica-cookies.html">Política de cookies</a></li>
-        <li><a href="../aviso-legal.html">Aviso legal</a></li>
-        <li><a href="../accesibilidad.html">Accesibilidad</a></li>
+        <li><a href="${base}politica-privacidad.html">Política de privacidad</a></li>
+        <li><a href="${base}politica-cookies.html">Política de cookies</a></li>
+        <li><a href="${base}aviso-legal.html">Aviso legal</a></li>
+        <li><a href="${base}accesibilidad.html">Accesibilidad</a></li>
       </ul>
     </div>
     <div class="footer-redes">

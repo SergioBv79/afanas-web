@@ -1,5 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
+  const base = location.pathname.includes("/proyecto/") || location.pathname.includes("/politica") || location.pathname.includes("/aviso") || location.pathname.includes("/accesibilidad") ? "../" : "";
+
   const headerHTML = `
     <header class="cabecera">
       <div class="banner-top">
@@ -32,11 +34,11 @@ document.addEventListener("DOMContentLoaded", function () {
               <li class="submenu">
                 <a href="#"><i class="fas fa-users" style="color:#6cc2b3;"></i> El proyecto</a>
                 <ul class="submenu-lista">
-                  <li><a href="../proyecto/quienes-somos.html">Quiénes somos</a></li>
-                  <li><a href="../proyecto/mision-vision.html">Misión, Visión y Valores</a></li>
-                  <li><a href="../proyecto/historia.html">Historia</a></li>
-                  <li><a href="../proyecto/transparencia.html">Transparencia</a></li>
-                  <li><a href="../proyecto/equipo.html">Equipo</a></li>
+                  <li><a href="${base}proyecto/quienes-somos.html">Quiénes somos</a></li>
+                  <li><a href="${base}proyecto/mision-vision.html">Misión, Visión y Valores</a></li>
+                  <li><a href="${base}proyecto/historia.html">Historia</a></li>
+                  <li><a href="${base}proyecto/transparencia.html">Transparencia</a></li>
+                  <li><a href="${base}proyecto/equipo.html">Equipo</a></li>
                 </ul>
               </li>
               <li class="submenu">
@@ -104,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <div class="cabecera-menu-responsive">
       <div class="logo-menu-responsive">
   <a href="../index.html">
-    <img src="../icons/Logo bandera (1).png" alt="Logotipo AFANAS">
+    <img src="${base}icons/Logo bandera (1).png" alt="Logotipo AFANAS">
   </a>
 </div>
 
@@ -116,11 +118,11 @@ document.addEventListener("DOMContentLoaded", function () {
         <span class="desplegable">El proyecto <span class="flecha flecha-desplegable">&#62;</span></span>
 
         <ul class="submenu-responsive">
-          <li><a href="../proyecto/quienes-somos.html">Quiénes somos</a></li>
-          <li><a href="../proyecto/mision-vision.html">Misión, Visión y Valores</a></li>
-          <li><a href="../proyecto/historia.html">Historia</a></li>
-          <li><a href="../proyecto/transparencia.html">Transparencia</a></li>
-          <li><a href="../proyecto/equipo.html">Equipo</a></li>
+          <li><a href="${base}proyecto/quienes-somos.html">Quiénes somos</a></li>
+          <li><a href="${base}proyecto/mision-vision.html">Misión, Visión y Valores</a></li>
+          <li><a href="${base}proyecto/historia.html">Historia</a></li>
+          <li><a href="${base}proyecto/transparencia.html">Transparencia</a></li>
+          <li><a href="${base}proyecto/equipo.html">Equipo</a></li>
         </ul>
       </li>
       <li><span class="desplegable">Ámbito social <span class="flecha">&#62;</span></span></li>
