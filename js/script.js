@@ -76,3 +76,23 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+
+window.addEventListener("load", () => {
+  const btnSubir = document.getElementById("btn-subir");
+
+  if (!btnSubir) return;
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      btnSubir.style.display = "block";
+    } else {
+      btnSubir.style.display = "none";
+    }
+  });
+
+  btnSubir.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
+

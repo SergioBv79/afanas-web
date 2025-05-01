@@ -1946,3 +1946,32 @@ main.subpagina > section {
 }
 
 
+
+
+@media (max-width: 768px) {
+  body.subpagina main {
+    padding-top: 140px !important;
+  }
+}
+
+#btn-subir {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  z-index: 9999;
+  background-color: #0e3a60;
+  color: white;
+  border: none;
+  padding: 12px 14px;
+  border-radius: 50%;
+  font-size: 1.4em;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  display: none;
+  transition: all 0.3s ease;
+}
+
+#btn-subir:hover {
+  background-color: #6cc2b3;
+  color: #0e3a60;
+}

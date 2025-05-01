@@ -1,6 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-  // ✅ Detecta si estamos en una subcarpeta o en una página legal que necesita rutas relativas con "../"
+  // ✅ Detecta si estamos en una subcarpeta o en una página legal que necesita rutas relativas con "../ cuando usamos ${base} "
   const base = location.pathname.includes("/proyecto/") ? "../" : "";
 
 
@@ -45,6 +45,7 @@ const footerHTML = `
   <div class="footer-copy">
     <p>&copy; 2025 AFANAS El Puerto y Bahía. Todos los derechos reservados.</p>
   </div>
+  
 </footer>
 `;
 
