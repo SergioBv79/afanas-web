@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
   const base = location.pathname.includes("/proyecto/") || location.pathname.includes("/politica") || location.pathname.includes("/aviso") || location.pathname.includes("/accesibilidad") ? "../" : "";
 
@@ -105,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
   <div class="menu-overlay-contenido">
     <div class="cabecera-menu-responsive">
       <div class="logo-menu-responsive">
-  <a href="../index.html">
+  <a href="${base}index.html">
     <img src="${base}icons/Logo bandera (1).png" alt="Logotipo AFANAS">
   </a>
 </div>
@@ -147,10 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
   </div>
 `;
 
-
   document.body.appendChild(menuOverlay);
-
-  
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -162,37 +158,24 @@ document.addEventListener('DOMContentLoaded', function () {
     menuOverlay.classList.add('activo');
   });
 
-
   document.addEventListener("click", function (e) {
     if (e.target.classList.contains("desplegable") || e.target.closest('.desplegable')) {
       const target = e.target.closest('.desplegable');
       const submenu = target.nextElementSibling;
       const flecha = target.querySelector(".flecha-desplegable");
       const isVisible = submenu.style.display === "block";
-  
-      // Cierra todos los submenús
+
       document.querySelectorAll(".submenu-responsive").forEach(s => s.style.display = "none");
-      // Muestra todas las flechas
       document.querySelectorAll(".flecha-desplegable").forEach(f => f.style.visibility = "visible");
-  
+
       if (!isVisible) {
         submenu.style.display = "block";
         if (flecha) flecha.style.visibility = "hidden";
       }
     }
   });
-  
-  
-  
 
-
-  
   cerrarBtn.addEventListener('click', function () {
     menuOverlay.classList.remove('activo');
   });
 });
-
-
-
-
-
