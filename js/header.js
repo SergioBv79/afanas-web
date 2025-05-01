@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="cabecera-contenido">
         <div class="menu-superior">
           <div class="logo-superior">
-            <a href="../index.html" class="logo"><img src="../icons/Logo bandera (1).png" alt="Logo AFANAS"></a>
+            <a href="${base}index.html" class="logo"><img src="${base}icons/Logo bandera (1).png" alt="Logotipo AFANAS"></a>
           </div>
           
           <ul>
