@@ -13,7 +13,6 @@
   <link rel="manifest" href="../icons/favicons/site.webmanifest">
 </head>
 <body class="subpagina politica-cookies">
-
   <div id="header-container"></div>
   <main class="subpagina fade-in-up">
   <h1>Política de cookies</h1>
@@ -64,22 +63,35 @@
   </a>
 </p>
 
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const enlace = document.getElementById("enlace-cookies");
+    const boton = document.getElementById("abrir-configuracion-cookies");
+    if (enlace && boton) {
+      enlace.addEventListener("click", function (e) {
+        e.preventDefault();
+        boton.click();
+      });
+    }
+  });
+</script>
+
+
+
+
+
 </main>
 <div id="footer-container"></div>
+<div id="cookie-banner-container"></div>
+<div id="cookie-settings-container"></div>
+<script src="js/header.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/cookies.js"></script>
 <script src="js/script.js"></script>
-<script src="../js/header.js"></script>
-<script src="../js/footer.js"></script>
-<div id="cookie-banner-container"></div>
-<div id="cookie-settings-container"></div>
-<script src="../js/cookies.js"></script>
-
-<div id="cookie-banner-container"></div>
-<div id="cookie-settings-container"></div>
 <button id="abrir-configuracion-cookies" class="boton-cookies-flotante" title="Cambiar configuración de cookies">
   <i class="fas fa-cookie-bite"></i>
 </button>
-<script src="../js/cookies.js"></script>
-</body>
-
 </body>
 </html>
