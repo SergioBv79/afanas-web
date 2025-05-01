@@ -145,7 +145,8 @@ document.addEventListener("DOMContentLoaded", function () {
     </ul>
   </div>
 `;
-menuOverlay.innerHTML = menuOverlay.innerHTML.replace(/\\$\\{base\\}/g, base);
+menuOverlay.innerHTML = menuOverlay.innerHTML.replace(/\$\{base\}/g, base);
+
 
   document.body.appendChild(menuOverlay);
 });
