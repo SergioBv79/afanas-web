@@ -1975,3 +1975,129 @@ main.subpagina > section {
   background-color: #6cc2b3;
   color: #0e3a60;
 }
+
+
+/* AVISO LEGAL — estilo cuidado */
+main.aviso-legal {
+  padding: 60px 25px;
+  background-color: #ffffff;
+  max-width: 950px;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+}
+
+.aviso-legal h1 {
+  font-size: 2.2em;
+  color: #0e3a60;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.aviso-legal h2 {
+  font-size: 1.4em;
+  color: #0e3a60;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.aviso-legal p,
+.aviso-legal ul li {
+  font-size: 1.05em;
+  line-height: 1.8;
+  color: #333;
+}
+
+.bloque-legal {
+  margin-bottom: 30px;
+}
+
+.bloque-legal ul {
+  padding-left: 25px;
+  list-style-type: disc;
+}
+
+.bloque-legal a {
+  color: #0e3a60;
+  font-weight: 500;
+  text-decoration: underline;
+}
+.bloque-legal a:hover {
+  color: #f5a623;
+}
+
+
+@media (max-width: 768px) {
+  body.subpagina main.aviso-legal {
+    padding-top: 110px !important;
+  }
+}
+
+body.subpagina main.aviso-legal {
+  margin-top: 50px;
+}
+
+
+body.subpagina main.politica-privacidad {
+  margin-top: 50px;
+}
+@media (max-width: 768px) {
+  body.subpagina main.politica-privacidad {
+    margin-top: 180px !important;
+    padding-top: 40px !important;
+  }
+}
+
+
+/* POLÍTICA DE PRIVACIDAD — estilo cuidado */
+main.politica-privacidad {
+  padding: 60px 25px;
+  background-color: #ffffff;
+  max-width: 950px;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+}
+
+.politica-privacidad h1 {
+  font-size: 2.2em;
+  color: #0e3a60;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.politica-privacidad h2 {
+  font-size: 1.4em;
+  color: #0e3a60;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.politica-privacidad p,
+.politica-privacidad ul li {
+  font-size: 1.05em;
+  line-height: 1.8;
+  color: #333;
+}
+
+.politica-privacidad .bloque-legal {
+  margin-bottom: 30px;
+}
+
+.politica-privacidad .bloque-legal ul {
+  padding-left: 25px;
+  list-style-type: disc;
+}
+
+.politica-privacidad .bloque-legal a {
+  color: #0e3a60;
+  font-weight: 500;
+  text-decoration: underline;
+}
+.politica-privacidad .bloque-legal a:hover {
+  color: #f5a623;
+}
