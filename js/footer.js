@@ -1,6 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-  const base = location.pathname.includes("/proyecto/") || location.pathname.includes("/politica") || location.pathname.includes("/aviso") || location.pathname.includes("/accesibilidad") ? "../" : "";
+  const depth = location.pathname.split("/").filter(p => p).length;
+const base = depth > 1 ? "../" : "";
 
   const bloqueMapa = `
   <div class="footer-mapa" style="margin-top: 20px;">
