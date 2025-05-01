@@ -1,13 +1,9 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-  const base =
-  location.pathname.includes("/proyecto/") ||
-  location.pathname.includes("politica-privacidad") ||
-  location.pathname.includes("politica-cookies") ||
-  location.pathname.includes("aviso-legal") ||
-  location.pathname.includes("accesibilidad")
-    ? "../"
-    : "";
+  
+  const base = location.pathname.includes("/proyecto/") ? "../" : "";
+
+
 
   const bloqueMapa = `
   <div class="footer-mapa" style="margin-top: 20px;">
