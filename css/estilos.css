@@ -1597,6 +1597,8 @@ main.subpagina > section {
   }
 }
 
+
+
 /* ========================================
    RESPONSIVE DESIGN - CABECERA Y COOKIES
 ======================================== */
@@ -2045,8 +2047,8 @@ body.subpagina main.politica-privacidad {
 }
 @media (max-width: 768px) {
   body.subpagina main.politica-privacidad {
-    margin-top: 180px !important;
-    padding-top: 40px !important;
+    margin-top: 100px !important;
+    padding-top: 20px !important;
   }
 }
 
@@ -2101,3 +2103,70 @@ main.politica-privacidad {
 .politica-privacidad .bloque-legal a:hover {
   color: #f5a623;
 }
+
+/* ACCESIBILIDAD — estilo cuidado */
+body.subpagina main.accesibilidad {
+  margin-top: 200px;
+}
+@media (max-width: 768px) {
+  body.subpagina main.accesibilidad {
+    margin-top: 100px !important;
+    padding-top: 20px !important;
+  }
+}
+
+/* ACCESIBILIDAD — estilo visual como el resto */
+main.accesibilidad {
+  padding: 60px 25px;
+  background-color: #ffffff;
+  max-width: 950px;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+}
+
+.accesibilidad h1 {
+  font-size: 2.2em;
+  color: #0e3a60;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.accesibilidad h2 {
+  font-size: 1.4em;
+  color: #0e3a60;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.accesibilidad p,
+.accesibilidad ul li {
+  font-size: 1.05em;
+  line-height: 1.8;
+  color: #333;
+}
+
+.accesibilidad .bloque-legal {
+  margin-bottom: 30px;
+}
+
+.accesibilidad .bloque-legal ul {
+  padding-left: 25px;
+  list-style-type: disc;
+}
+
+.accesibilidad .bloque-legal a {
+  color: #0e3a60;
+  font-weight: 500;
+  text-decoration: underline;
+}
+.accesibilidad .bloque-legal a:hover {
+  color: #f5a623;
+}
+
+body.subpagina main.accesibilidad {
+  margin-top: 80px;
+}
+
