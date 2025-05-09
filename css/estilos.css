@@ -1393,6 +1393,29 @@ main.subpagina > section {
 ======================================== */
 
 /* Tablets (pantallas de hasta 1024px) */
+
+/* === ESTILO VISUAL EXTRA PARA TRANSPARENCIA === */
+body.subpagina.transparencia {
+  background-image: url('../icons/patron-ligero.svg'); /* o .png si usas imagen rasterizada */
+  background-size: 220px;
+  background-repeat: repeat;
+  background-color: #f0faff;
+  opacity: 0.95;
+}
+
+.bloque.desplegable .toggle i.fas:first-child {
+  color: #f5a623; /* naranja AFANAS */
+}
+
+.intro-transparencia h1 {
+  font-family: 'Patrick Hand', cursive;
+}
+
+
+
+
+
+
 @media (max-width: 1024px) {
   /* Ajustes generales para tablet */
   .menu-superior ul {
@@ -2169,22 +2192,21 @@ body.subpagina main.accesibilidad {
 }
 
 
-/* === ESTILO COMPACTO Y VISUALMENTE CURIOSO PARA TRANSPARENCIA === */
+/* === ESTILO LIMPIO Y UNIFICADO PARA TRANSPARENCIA === */
 .bloques-transparencia {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 18px;
+  gap: 20px;
   max-width: 900px;
   margin: 0 auto;
-  padding: 30px 16px;
+  padding: 40px 16px;
 }
 
 .bloque.desplegable {
-  background: #ffffff;
-  border-left: 6px solid #6cc2b3;
+  background-color: #f4f9fc;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
   transition: transform 0.2s ease;
 }
 
@@ -2209,7 +2231,7 @@ body.subpagina main.accesibilidad {
 }
 
 .bloque.desplegable .toggle:hover {
-  background-color: #f4f9fc;
+  background-color: rgba(0, 0, 0, 0.03);
 }
 
 .bloque.desplegable .toggle i.fas.fa-chevron-down {
@@ -2222,15 +2244,20 @@ body.subpagina main.accesibilidad {
 
 .bloque.desplegable .contenido {
   display: none;
-  padding: 16px 24px 20px;
-  background-color: #fcfcfc;
-  border-top: 1px solid #eee;
+  padding: 20px 22px;
   animation: fadeIn 0.4s ease-in-out;
+  background-color: #ffffff;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-5px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .bloque.desplegable .contenido ul {
@@ -2241,7 +2268,7 @@ body.subpagina main.accesibilidad {
 
 .bloque.desplegable .contenido li {
   margin: 10px 0;
-  padding-left: 20px;
+  padding-left: 24px;
   position: relative;
 }
 
@@ -2250,7 +2277,7 @@ body.subpagina main.accesibilidad {
   position: absolute;
   left: 0;
   top: 2px;
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
 .bloque.desplegable .contenido a {
@@ -2274,6 +2301,17 @@ body.subpagina main.accesibilidad {
   padding-bottom: 6px;
 }
 
+/* Frase destacada */
+.frase-acceso {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.1em;
+  color: #0e3a60;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/* Responsable de transparencia */
 .responsable-transparencia {
   background-color: #f5f9f7;
   margin: 40px auto;
@@ -2290,6 +2328,7 @@ body.subpagina main.accesibilidad {
   font-weight: bold;
 }
 
+/* Intro */
 .intro-transparencia {
   background-color: #fdfdfd;
   max-width: 880px;
