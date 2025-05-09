@@ -19,11 +19,91 @@
   <script src="../js/header.js"></script>
   
 
-  <main class="fade-in-up subpagina">
-  <h1>Transparencia</h1>
-  <img class="img-seccion" src="../img/proyecto/transparencia.jpg" alt="Imagen decorativa de Transparencia">
-  <p>Contenido específico de Transparencia. Puedes personalizar esta sección con información, imágenes o documentos.</p>
-</main>
+  <main class="subpagina fade-in-up transparencia">
+    <section class="intro-transparencia">
+      <h1><i class="fas fa-eye"></i> Transparencia</h1>
+      <p>En AFANAS El Puerto y Bahía creemos en una gestión clara, accesible y responsable. Aquí encontrarás información clave sobre la estructura, normativa, financiación y control económico de nuestra entidad.</p>
+    </section>
+  
+    <section class="bloques-transparencia">
+      <!-- 🏛️ Órganos de gobierno -->
+      <div class="bloque desplegable">
+        <button class="toggle"><i class="fas fa-users-cog"></i> Órganos de gobierno <i class="fas fa-chevron-down"></i></button>
+        <div class="contenido">
+          <ul>
+            <!-- 📎 Añadir aquí los enlaces PDF a asamblea, junta directiva, etc. -->
+            <!-- Ejemplo: -->
+            <!-- <li><a href="downloads_Documentos/organos-junta-directiva.pdf" target="_blank">Junta Directiva</a></li> -->
+          </ul>
+        </div>
+      </div>
+  
+      <!-- 📄 Estatutos y normativa -->
+      <div class="bloque desplegable">
+        <button class="toggle"><i class="fas fa-file-alt"></i> Estatutos y documentos institucionales <i class="fas fa-chevron-down"></i></button>
+        <div class="contenido">
+          <ul>
+            <!-- 📎 Añadir estatutos y escrituras aquí -->
+            <!-- <li><a href="downloads_Documentos/estatutos-afanas.pdf" target="_blank">Estatutos de AFANAS</a></li> -->
+            <ul>
+              <!-- Ejemplo de lista de varios documentos dentro del bloque PARA VER COMO QUEDA EL DESPLEGABLE ELIMINAR CUANDO SE PONGA ORIGINALES DEFINITIVOS -->
+              <li><a href="downloads_Documentos/junta-directiva-2023.pdf" target="_blank">Junta Directiva 2023</a></li>
+              <li><a href="downloads_Documentos/asamblea-general-2023.pdf" target="_blank">Acta Asamblea General 2023</a></li>
+              <li><a href="downloads_Documentos/estatutos-afanas.pdf" target="_blank">Estatutos vigentes</a></li>
+            </ul>
+            
+          </ul>
+        </div>
+      </div>
+  
+      <!-- 💰 Cuentas anuales y auditorías -->
+      <div class="bloque desplegable">
+        <button class="toggle"><i class="fas fa-coins"></i> Cuentas anuales y auditorías <i class="fas fa-chevron-down"></i></button>
+        <div class="contenido">
+          <h4>AFANAS El Puerto y Bahía</h4>
+          <ul>
+            <!-- <li><a href="downloads_Documentos/cuentas-afanas-2023.pdf" target="_blank">Cuentas 2023</a></li> -->
+          </ul>
+          <h4>Fundación de Apoyos</h4>
+          <ul>
+            <!-- <li><a href="downloads_Documentos/cuentas-fundacion-apoyos-2023.pdf" target="_blank">Auditoría 2023</a></li> -->
+          </ul>
+          <h4>Salinas Blancas</h4>
+          <ul>
+            <!-- <li><a href="downloads_Documentos/auditoria-salinas-2023.pdf" target="_blank">Auditoría 2023</a></li> -->
+          </ul>
+        </div>
+      </div>
+  
+      <!-- 🤝 Convenios y contratos públicos -->
+      <div class="bloque desplegable">
+        <button class="toggle"><i class="fas fa-handshake"></i> Convenios y contratos públicos <i class="fas fa-chevron-down"></i></button>
+        <div class="contenido">
+          <ul>
+            <!-- <li><a href="downloads_Documentos/convenio-junta-andalucia.pdf" target="_blank">Convenio Junta de Andalucía</a></li> -->
+          </ul>
+        </div>
+      </div>
+  
+      <!-- 🧾 Subvenciones públicas -->
+      <div class="bloque desplegable">
+        <button class="toggle"><i class="fas fa-file-invoice-dollar"></i> Subvenciones públicas <i class="fas fa-chevron-down"></i></button>
+        <div class="contenido">
+          <ul>
+            <!-- <li><a href="downloads_Documentos/subvenciones-afanas-2023.pdf" target="_blank">Subvenciones 2023</a></li> -->
+          </ul>
+        </div>
+      </div>
+    </section>
+  
+    <!-- 👩‍💼 Persona responsable de transparencia -->
+    <section class="responsable-transparencia">
+      <p><strong>Persona responsable de la transparencia y los mecanismos de información:</strong></p>
+      <p>Nombre: <strong>[Nombre y apellidos]</strong><br>
+      Correo electrónico: <a href="mailto:[email]">[email]</a></p>
+    </section>
+  </main>
+  
 
   
   <script src="../js/script.js"></script>
@@ -32,6 +112,19 @@
   <div id="cookie-banner-container"></div>
   <div id="cookie-settings-container"></div>
   <script src="../js/cookies.js"></script>
+  <script>
+    document.querySelectorAll('.bloque.desplegable .toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('activo');
+        const contenido = btn.nextElementSibling;
+        if (contenido.style.display === 'block') {
+          contenido.style.display = 'none';
+        } else {
+          contenido.style.display = 'block';
+        }
+      });
+    });
+  </script>
   <button id="abrir-configuracion-cookies" class="boton-cookies-flotante" title="Cambiar configuración de cookies">
     <i class="fas fa-cookie-bite"></i>
   </button>
