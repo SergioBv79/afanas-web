@@ -1,39 +1,23 @@
-
 @media (max-width: 768px) {
-  .frase-superpuesta {
-    padding: 12px 20px;
-    max-width: 85%;
-    top: 45%;
+  body.subpagina.equipo .hero-equipo {
+    margin-top: -10px !important;
   }
 
-  .frase-superpuesta h1 {
-    font-size: 1.4em;
-  }
-
-  .frase-superpuesta p {
-    font-size: 0.95em;
-  }
-
-  .intro-equipo {
-    margin-top: -60px;
-  }
-}
-@media (max-width: 768px) {
   body.subpagina.equipo .frase-superpuesta {
-    padding: 10px 20px;
-    max-width: 85%;
-    top: 40%;
+    padding: 4px 16px;
+    max-width: 96%;
+    top: 44%;
   }
 
   body.subpagina.equipo .frase-superpuesta h1 {
-    font-size: 1.4em;
+    font-size: 1em;
   }
 
   body.subpagina.equipo .frase-superpuesta p {
-    font-size: 0.95em;
+    font-size: 0.78em;
   }
 
   body.subpagina.equipo .intro-equipo {
-    margin-top: -60px !important; /* <-- fuerza a subir el texto */
+    margin-top: -100px !important;
   }
 }
