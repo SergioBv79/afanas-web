@@ -18,3 +18,22 @@
     margin-top: -60px;
   }
 }
+@media (max-width: 768px) {
+  body.subpagina.equipo .frase-superpuesta {
+    padding: 10px 20px;
+    max-width: 85%;
+    top: 40%;
+  }
+
+  body.subpagina.equipo .frase-superpuesta h1 {
+    font-size: 1.4em;
+  }
+
+  body.subpagina.equipo .frase-superpuesta p {
+    font-size: 0.95em;
+  }
+
+  body.subpagina.equipo .intro-equipo {
+    margin-top: -60px !important; /* <-- fuerza a subir el texto */
+  }
+}
