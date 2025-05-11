@@ -1,12 +1,14 @@
+
 @media (max-width: 768px) {
   body.subpagina.equipo .hero-equipo {
     margin-top: -10px !important;
   }
 
   body.subpagina.equipo .frase-superpuesta {
-    padding: 4px 16px;
-    max-width: 96%;
+    padding: 2px 12px;
+    max-width: 100%;
     top: 44%;
+    white-space: normal;
   }
 
   body.subpagina.equipo .frase-superpuesta h1 {
@@ -14,7 +16,8 @@
   }
 
   body.subpagina.equipo .frase-superpuesta p {
-    font-size: 0.78em;
+    font-size: 0.75em;
+    line-height: 1.1;
   }
 
   body.subpagina.equipo .intro-equipo {
