@@ -1,130 +1,91 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Equipo - AFANAS El Puerto y Bahía</title>
-  <link rel="stylesheet" href="../css/estilos.css" />
-  <link rel="stylesheet" href="../css/cookies.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="../icons/favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../icons/favicons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../icons/favicons/apple-touch-icon.png">
-  <link rel="manifest" href="../icons/favicons/site.webmanifest">
-</head>
-
-<body class="subpagina">
-  <div id="header-container"></div>
-  <script src="../js/header.js"></script>
-
-  <!-- Imagen superior destacada con título cambiar imagen y titularla portada-equipo  -->
-
-
-
-
-  <main class="fade-in-up subpagina equipo">
-    <section class="hero-equipo">
-  <img src="../img/fotos equipo/pexels-fauxels-3184423.jpg" alt="Equipo de AFANAS">
-      <div class="frase-superpuesta">
-        <h1><i class="fas fa-people-group"></i> Nuestro equipo</h1>
-        <p>Personas que acompañan, apoyan y transforman.</p>
-      </div>
-    </section>
-    <section class="intro-equipo texto-centrado">
-      <p><strong>AFANAS El Puerto y Bahía</strong> es una asociación de familias sin ánimo de lucro con una estructura democrática, basada en la participación activa de sus personas socias. No dependemos de ningún organismo público, y nuestros cargos de dirección son desempeñados de forma altruista.</p>
-      <p>Los recursos se reinvierten en mejorar nuestros centros, programas y apoyos. Esta autonomía nos ha permitido crecer con estabilidad, consolidar una red de servicios especializada y ser referentes en la atención a personas con discapacidad, personas mayores con deterioro cognitivo y menores en situación de vulnerabilidad.</p>
-      <p>Gracias al trabajo conjunto de personas trabajadoras, directivas y familias, hemos construido un proyecto fuerte, cercano y con un claro compromiso social.</p>
-    </section>
-    
-    <section class="carrusel-frases-equipo">
-      <p class="frase-activa">“La pasión por las personas es nuestra motivación”</p>
-      <p>“Un equipo diverso, comprometido y con una misma filosofía: creer en las personas”</p>
-      <p>“El apoyo empieza con la mirada”</p>
-      <p>“Trabajamos desde la empatía y la profesionalidad”</p>
-    </section>
-
-    <section class="categoria-equipo">
-      <h2>Junta Directiva</h2>
-      <div class="contenedor-equipo">
-        <!-- 🧑🏻 Foto ejemplo Junta Directiva (sustituir cuando se tengan definitivas) -->
-        <!-- Fotos definitivas deben guardarse en /img/fotos-equipo/fotos-junta-directiva/ -->
-        <div class="tarjeta-equipo">
-          <img src="../img/fotos equipo/presidente.jpg" alt="Miembro Junta">
-          <h3>Nombre Apellido</h3>
-          <p>Presidente</p> <!-- 📝 Cambiar cargo si fuera necesario -->
-          <blockquote>“Servir a las personas con compromiso”</blockquote>
-        </div>
-        <div class="tarjeta-equipo">
-          <img src="../img/fotos equipo/vicepresidenta.jpg" alt="Miembro Junta">
-          <h3>Nombre Apellido</h3>
-          <p>Vicepresidenta</p>
-          <blockquote>“Creer en la diferencia es creer en el futuro”</blockquote>
-        </div>
-        <!-- ➕ Añadir o eliminar tarjetas según los miembros definitivos -->
-        <div class="tarjeta-equipo">
-          <img src="../img/fotos equipo/vocal.jpg" alt="Miembro Junta">
-          <h3>Nombre Apellido</h3>
-          <p>Vocalía de Educación</p> <!-- 📝 Cambiar cargo si fuera necesario -->
-          <blockquote>“Servir a las personas con compromiso”</blockquote>
-        </div>
-        <div class="tarjeta-equipo">
-          <img src="../img/fotos equipo/trabajadora 2.jpg" alt="Miembro Junta">
-          <h3>Nombre Apellido</h3>
-          <p> Vocalía de salud</p> <!-- 📝 Cambiar cargo si fuera necesario -->
-          <blockquote>“Servir a las personas con compromiso”</blockquote>
-        </div>
-
-
-      </div>
-    </section>
-
-    <section class="categoria-equipo">
-      <h2>El Equipo</h2>
-      <div class="contenedor-equipo">
-        <!-- 👩🏽 Foto ejemplo del equipo profesional -->
-        <!-- Guardar en /img/fotos-equipo/fotos-miembros-equipo/ -->
-        <div class="tarjeta-equipo">
-          <img src="../img/fotos equipo/trabajador 1.jpg" alt="Persona trabajadora">
-          <h3>Nombre Apellido</h3>
-          <p>Coordinacion de Area de Atencion a personas con discacidad</p>
-          <blockquote>“Cada paso es un logro compartido”</blockquote>
-        </div>
-        <div class="tarjeta-equipo">
-          <img src="../img/fotos equipo/vocal.jpg" alt="Persona trabajadora">
-          <h3>Nombre Apellido</h3>
-          <p>Coordicación Area de Atención a personas mayores</p>
-          <blockquote>“El vínculo transforma”</blockquote>
-        </div>
-        <!-- ➕ Puedes duplicar este bloque para añadir más perfiles -->
-      </div>
-    </section>
-         <!-- poner la ruta correcta del organigrama despues de elaborarrlo en pdf con imagen corporativa -->
-    <section class="bloque-equipo-descarga">
-      <h2><i class="fas fa-file-pdf"></i> Documentación</h2>
-      <p>Aquí puedes consultar nuestro organigrama:</p>
-      <a href="../downloads_Documentos/organigrama-afanas.pdf" target="_blank" class="boton-descarga">
-        <i class="fas fa-download"></i> Ver organigrama
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Equipo - AFANAS El Puerto y Bahía</title>
+<link href="../css/estilos.css" rel="stylesheet"/>
+<link href="../css/equipo-flechas-visibles.css" rel="stylesheet"/>
+<link href="../css/equipo-estilos-depurado.css" rel="stylesheet">
+<link href="../css/cookies.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="../icons/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../icons/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../icons/favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="../icons/favicons/site.webmanifest" rel="manifest"/>
+</link></head>
+<body class="subpagina equipo">
+<div id="header-container"></div>
+<script src="../js/header.js"></script>
+<main class="fade-in-up subpagina equipo">
+<section class="hero-equipo">
+<img alt="Nuestro equipo AFANAS" src="../img/fotos equipo/istockphoto-1369171053-612x612.jpg"/>
+<div class="frase-superpuesta">
+<h1><i class="fas fa-people-group"></i> Nuestro equipo</h1>
+<p>Personas que acompañan, apoyan y transforman.</p>
+</div>
+</section>
+<section class="intro-equipo texto-centrado">
+<p><strong>AFANAS El Puerto y Bahía</strong> es una asociación de familias sin ánimo de lucro con una estructura democrática, basada en la participación activa de sus personas socias. No dependemos de ningún organismo público, y nuestros cargos de dirección son desempeñados de forma altruista.</p>
+<p>Los recursos se reinvierten en mejorar nuestros centros, programas y apoyos. Esta autonomía nos ha permitido crecer con estabilidad, consolidar una red de servicios especializada y ser referentes en la atención a personas con discapacidad, personas mayores con deterioro cognitivo y menores en situación de vulnerabilidad.</p>
+<p>Gracias al trabajo conjunto de personas trabajadoras, directivas y familias, hemos construido un proyecto fuerte, cercano y con un claro compromiso social.</p>
+</section>
+<section class="carrusel-frases-equipo">
+<p class="frase-activa">“La pasión por las personas es nuestra motivación”</p>
+<p>“Un equipo diverso, comprometido y con una misma filosofía: creer en las personas”</p>
+<p>“El apoyo empieza con la mirada”</p>
+<p>“Trabajamos desde la empatía y la profesionalidad”</p>
+</section>
+<section class="categoria-equipo">
+<h2>Junta Directiva</h2>
+<div class="slider-equipo" style="position: relative;">
+<button class="flecha-slider flecha-izquierda" onclick="moverSlide(this, -1)">‹</button>
+<button class="flecha-slider flecha-izquierda" onclick="moverSlide(this, -1)">‹</button><div class="slider-wrapper-equipo">
+<div class="tarjeta-equipo"><img alt="Miembro Junta" src="../img/fotos equipo/presidente.jpg"/><h3>Nombre Apellido</h3><p>Presidente</p><blockquote>“Servir a las personas con compromiso”</blockquote></div>
+<div class="tarjeta-equipo"><img alt="Miembro Junta" src="../img/fotos equipo/vicepresidenta.jpg"/><h3>Nombre Apellido</h3><p>Vicepresidenta</p><blockquote>“Creer en la diferencia es creer en el futuro”</blockquote></div>
+<div class="tarjeta-equipo"><img alt="Miembro Junta" src="../img/fotos equipo/vocal.jpg"/><h3>Nombre Apellido</h3><p>Vocalía de Educación</p><blockquote>“Servir a las personas con compromiso”</blockquote></div>
+<div class="tarjeta-equipo"><img alt="Miembro Junta" src="../img/fotos equipo/trabajadora 2.jpg"/><h3>Nombre Apellido</h3><p>Vocalía de Salud</p><blockquote>“Servir a las personas con compromiso”</blockquote></div>
+<div class="tarjeta-equipo"><img alt="Miembro Junta" src="../img/fotos equipo/presidente.jpg"/><h3>Nombre Apellido</h3><p>Presidente</p><blockquote>“Servir a las personas con compromiso”</blockquote></div>
+<div class="tarjeta-equipo"><img alt="Miembro Junta" src="../img/fotos equipo/presidente.jpg"/><h3>Nombre Apellido</h3><p>Presidente</p><blockquote>“Servir a las personas con compromiso”</blockquote></div>
+<div class="tarjeta-equipo"><img alt="Miembro Junta" src="../img/fotos equipo/presidente.jpg"/><h3>Nombre Apellido</h3><p>Presidente</p><blockquote>“Servir a las personas con compromiso”</blockquote></div>
+<div class="tarjeta-equipo"><img alt="Miembro Junta" src="../img/fotos equipo/presidente.jpg"/><h3>Nombre Apellido</h3><p>Presidente</p><blockquote>“Servir a las personas con compromiso”</blockquote></div>
+<div class="tarjeta-equipo"><img alt="Miembro Junta" src="../img/fotos equipo/presidente.jpg"/><h3>Nombre Apellido</h3><p>Presidente</p><blockquote>“Servir a las personas con compromiso”</blockquote></div>
+</div><button class="flecha-slider flecha-derecha" onclick="moverSlide(this, 1)">›</button>
+<button class="flecha-slider flecha-derecha" onclick="moverSlide(this, 1)">›</button>
+</div>
+</section>
+<section class="categoria-equipo">
+<h2>El Equipo</h2>
+<div class="slider-equipo" style="position: relative;">
+<button class="flecha-slider flecha-izquierda" onclick="moverSlide(this, -1)">‹</button>
+<button class="flecha-slider flecha-izquierda" onclick="moverSlide(this, -1)">‹</button><div class="slider-wrapper-equipo">
+<div class="tarjeta-equipo"><img alt="Persona trabajadora" src="../img/fotos equipo/trabajador 1.jpg"/><h3>Nombre Apellido</h3><p>Coordinación Atención Discapacidad</p><blockquote>“Cada paso es un logro compartido”</blockquote></div>
+<div class="tarjeta-equipo"><img alt="Persona trabajadora" src="../img/fotos equipo/vocal.jpg"/><h3>Nombre Apellido</h3><p>Coordinación Atención Mayores</p><blockquote>“El vínculo transforma”</blockquote></div>
+<div class="tarjeta-equipo"><img alt="Persona trabajadora" src="../img/fotos equipo/vocal.jpg"/><h3>Nombre Apellido</h3><p>Coordinación Atención Mayores</p><blockquote>“El vínculo transforma”</blockquote></div>
+<div class="tarjeta-equipo"><img alt="Persona trabajadora" src="../img/fotos equipo/vocal.jpg"/><h3>Nombre Apellido</h3><p>Coordinación Atención Mayores</p><blockquote>“El vínculo transforma”</blockquote></div>
+<div class="tarjeta-equipo"><img alt="Persona trabajadora" src="../img/fotos equipo/vocal.jpg"/><h3>Nombre Apellido</h3><p>Coordinación Atención Mayores</p><blockquote>“El vínculo transforma”</blockquote></div>
+</div><button class="flecha-slider flecha-derecha" onclick="moverSlide(this, 1)">›</button>
+<button class="flecha-slider flecha-derecha" onclick="moverSlide(this, 1)">›</button>
+</div>
+</section>
+<section class="bloque-equipo-descarga">
+<h2><i class="fas fa-file-pdf"></i> Documentación</h2>
+<p>Aquí puedes consultar nuestro organigrama:</p>
+<a class="boton-descarga" href="../downloads_Documentos/organigrama-afanas.pdf" target="_blank">
+<i class="fas fa-download"></i> Ver organigrama
       </a>
-    </section>
-
-    
-  </main>
-
-  <script src="../js/script.js"></script>
-  <div id="footer-container"></div>
-  <script src="../js/footer.js"></script>
-  <div id="cookie-banner-container"></div>
-  <div id="cookie-settings-container"></div>
-  <script src="../js/cookies.js"></script>
-  <button id="abrir-configuracion-cookies" class="boton-cookies-flotante" title="Cambiar configuración de cookies">
-    <i class="fas fa-cookie-bite"></i>
-  </button>
-  <button id="btn-subir" title="Volver arriba">
-    <i class="fas fa-chevron-up"></i>
-  </button>
-
-  <script>
-    // Carrusel animado de frases de equipo
+</section>
+</main>
+<script src="../js/script.js"></script>
+<div id="footer-container"></div>
+<script src="../js/footer.js"></script>
+<script src="../js/cookies.js"></script>
+<div id="cookie-banner-container"></div>
+<div id="cookie-settings-container"></div>
+<button class="boton-cookies-flotante" id="abrir-configuracion-cookies" title="Cambiar configuración de cookies"><i class="fas fa-cookie-bite"></i></button>
+<button id="btn-subir" title="Volver arriba"><i class="fas fa-chevron-up"></i></button>
+<script>
     const frases = document.querySelectorAll('.carrusel-frases-equipo p');
     let index = 0;
     setInterval(() => {
@@ -132,6 +93,17 @@
       index = (index + 1) % frases.length;
       frases[index].classList.add('frase-activa');
     }, 5000);
+
+    function moverSlide(btn, direccion) {
+      const slider = btn.closest('.slider-equipo');
+      const wrapper = slider.querySelector('.slider-wrapper-equipo');
+      const tarjeta = wrapper.querySelector('.tarjeta-equipo');
+      const ancho = tarjeta.offsetWidth + 20;
+      wrapper.scrollBy({
+        left: ancho * direccion,
+        behavior: 'smooth'
+      });
+    }
   </script>
 </body>
 </html>

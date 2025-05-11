@@ -1,0 +1,61 @@
+.slider-equipo {
+  position: relative;
+  padding: 0 40px;
+  overflow: hidden;
+}
+
+.slider-wrapper-equipo {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+.slider-wrapper-equipo::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-equipo .tarjeta-equipo {
+  flex: 0 0 auto;
+  width: 22%;
+  min-width: 220px;
+  max-width: 280px;
+}
+
+.flecha-slider {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  background: #0e3a60;
+  color: white;
+  border: none;
+  font-size: 1.8em;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+.flecha-slider:hover {
+  background: #205959;
+}
+
+.flecha-izquierda {
+  left: 10px;
+}
+
+.flecha-derecha {
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .flecha-slider {
+    display: none;
+  }
+}
