@@ -7,8 +7,8 @@
   body.subpagina.equipo .frase-superpuesta {
     padding: 2px 8px;
     max-width: 100%;
-    top: 43%;
-   
+    top: 42%;
+    white-space: normal;
   }
 
   body.subpagina.equipo .frase-superpuesta h1 {
@@ -21,6 +21,6 @@
   }
 
   body.subpagina.equipo .intro-equipo {
-    margin-top: -100px !important;
+    margin-top: -110px !important;
   }
 }
