@@ -45,10 +45,11 @@ document.addEventListener("DOMContentLoaded", function () {
               <li class="submenu">
                 <a href="#"><i class="fas fa-hand-holding-heart" style="color:#f06;"></i> Ámbito social</a>
                 <ul class="submenu-lista">
-                  <li><a href="#">Atencion a personas con discapacidad intelectual</a></li>
-                  <li><a href="#">Atención a menores</a></li>
-                  <li><a href="#">Atencion a Personas mayores</a></li>
-                  <li><a href="#">Atención temprana</a></li>
+                  <li><a href="${base}ambito social/atencion-discapacidad.html">Atención a personas con discapacidad intelectual</a></li>
+                  <li><a href="${base}ambito social/atencion-temprana.html">Atención temprana</a></li>
+                  <li><a href="${base}ambito social/educacion-especial.html">Centros docentes de educación especial</a></li>
+                  <li><a href="${base}ambito social/atencion-menores.html">Atención a menores</a></li>
+                  <li><a href="${base}ambito social/atencion-personas-mayores.html">Atención a personas mayores</a></li>
                 </ul>
               </li>
               <li class="submenu">
