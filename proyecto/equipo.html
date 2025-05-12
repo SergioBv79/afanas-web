@@ -8,14 +8,14 @@
 <link href="../css/estilos.css" rel="stylesheet"/>
 <link href="../css/equipo-flechas-visibles.css" rel="stylesheet"/>
 <link href="../css/cookies.css" rel="stylesheet"/>
-<link rel="stylesheet" href="../css/equipo-fix-mobile.css">
-
+<link href="../css/equipo-fix-mobile.css" rel="stylesheet"/>
+<link href="../css/modales.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
-<link href="../icons/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../icons/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
 <link href="../icons/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
 <link href="../icons/favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 <link href="../icons/favicons/site.webmanifest" rel="manifest"/>
-</head>
+</link></head>
 <body class="subpagina equipo">
 <div id="header-container"></div>
 <script src="../js/header.js"></script>
@@ -41,33 +41,29 @@
 <section class="categoria-equipo">
 <h2>Junta Directiva</h2>
 <div class="slider-equipo" style="position: relative;">
-<button class="flecha-slider flecha-izquierda" onclick="moverSlide(this, -1)">‹</button>
 <button class="flecha-slider flecha-izquierda" onclick="moverSlide(this, -1)">‹</button><div class="slider-wrapper-equipo">
-<div class="tarjeta-equipo"><img alt="Miembro Junta" src="../img/fotos equipo/presidente.jpg"/><h3>Nombre Apellido</h3><p>Presidente</p><blockquote>“Servir a las personas con compromiso”</blockquote></div>
-<div class="tarjeta-equipo"><img alt="Miembro Junta" src="../img/fotos equipo/vicepresidenta.jpg"/><h3>Nombre Apellido</h3><p>Vicepresidenta</p><blockquote>“Creer en la diferencia es creer en el futuro”</blockquote></div>
-<div class="tarjeta-equipo"><img alt="Miembro Junta" src="../img/fotos equipo/vocal.jpg"/><h3>Nombre Apellido</h3><p>Vocalía de Educación</p><blockquote>“Servir a las personas con compromiso”</blockquote></div>
-<div class="tarjeta-equipo"><img alt="Miembro Junta" src="../img/fotos equipo/trabajadora 2.jpg"/><h3>Nombre Apellido</h3><p>Vocalía de Salud</p><blockquote>“Servir a las personas con compromiso”</blockquote></div>
-<div class="tarjeta-equipo"><img alt="Miembro Junta" src="../img/fotos equipo/presidente.jpg"/><h3>Nombre Apellido</h3><p>Presidente</p><blockquote>“Servir a las personas con compromiso”</blockquote></div>
-<div class="tarjeta-equipo"><img alt="Miembro Junta" src="../img/fotos equipo/presidente.jpg"/><h3>Nombre Apellido</h3><p>Presidente</p><blockquote>“Servir a las personas con compromiso”</blockquote></div>
-<div class="tarjeta-equipo"><img alt="Miembro Junta" src="../img/fotos equipo/presidente.jpg"/><h3>Nombre Apellido</h3><p>Presidente</p><blockquote>“Servir a las personas con compromiso”</blockquote></div>
-<div class="tarjeta-equipo"><img alt="Miembro Junta" src="../img/fotos equipo/presidente.jpg"/><h3>Nombre Apellido</h3><p>Presidente</p><blockquote>“Servir a las personas con compromiso”</blockquote></div>
-<div class="tarjeta-equipo"><img alt="Miembro Junta" src="../img/fotos equipo/presidente.jpg"/><h3>Nombre Apellido</h3><p>Presidente</p><blockquote>“Servir a las personas con compromiso”</blockquote></div>
+<div class="tarjeta-equipo" onclick="abrirModal('persona1')"><img alt="Miembro Junta" src="../img/fotos equipo/presidente.jpg"/><h3>Nombre Apellido</h3><p>Presidente</p><blockquote>“Servir a las personas con compromiso”</blockquote></div>
+<div class="tarjeta-equipo" onclick="abrirModal('persona2')"><img alt="Miembro Junta" src="../img/fotos equipo/vicepresidenta.jpg"/><h3>Nombre Apellido</h3><p>Vicepresidenta</p><blockquote>“Creer en la diferencia es creer en el futuro”</blockquote></div>
+<div class="tarjeta-equipo" onclick="abrirModal('persona3')"><img alt="Miembro Junta" src="../img/fotos equipo/vocal.jpg"/><h3>Nombre Apellido</h3><p>Vocalía de Educación</p><blockquote>“Servir a las personas con compromiso”</blockquote></div>
+<div class="tarjeta-equipo" onclick="abrirModal('persona4')"><img alt="Miembro Junta" src="../img/fotos equipo/trabajadora 2.jpg"/><h3>Nombre Apellido</h3><p>Vocalía de Salud</p><blockquote>“Servir a las personas con compromiso”</blockquote></div>
+<div class="tarjeta-equipo" onclick="abrirModal('persona5')"><img alt="Miembro Junta" src="../img/fotos equipo/presidente.jpg"/><h3>Nombre Apellido</h3><p>Presidente</p><blockquote>“Servir a las personas con compromiso”</blockquote></div>
+<div class="tarjeta-equipo" onclick="abrirModal('persona6')"><img alt="Miembro Junta" src="../img/fotos equipo/presidente.jpg"/><h3>Nombre Apellido</h3><p>Presidente</p><blockquote>“Servir a las personas con compromiso”</blockquote></div>
+<div class="tarjeta-equipo" onclick="abrirModal('persona7')"><img alt="Miembro Junta" src="../img/fotos equipo/presidente.jpg"/><h3>Nombre Apellido</h3><p>Presidente</p><blockquote>“Servir a las personas con compromiso”</blockquote></div>
+<div class="tarjeta-equipo" onclick="abrirModal('persona8')"><img alt="Miembro Junta" src="../img/fotos equipo/presidente.jpg"/><h3>Nombre Apellido</h3><p>Presidente</p><blockquote>“Servir a las personas con compromiso”</blockquote></div>
+<div class="tarjeta-equipo" onclick="abrirModal('persona9')"><img alt="Miembro Junta" src="../img/fotos equipo/presidente.jpg"/><h3>Nombre Apellido</h3><p>Presidente</p><blockquote>“Servir a las personas con compromiso”</blockquote></div>
 </div><button class="flecha-slider flecha-derecha" onclick="moverSlide(this, 1)">›</button>
-<button class="flecha-slider flecha-derecha" onclick="moverSlide(this, 1)">›</button>
 </div>
 </section>
 <section class="categoria-equipo">
 <h2>El Equipo</h2>
 <div class="slider-equipo" style="position: relative;">
-<button class="flecha-slider flecha-izquierda" onclick="moverSlide(this, -1)">‹</button>
 <button class="flecha-slider flecha-izquierda" onclick="moverSlide(this, -1)">‹</button><div class="slider-wrapper-equipo">
-<div class="tarjeta-equipo"><img alt="Persona trabajadora" src="../img/fotos equipo/trabajador 1.jpg"/><h3>Nombre Apellido</h3><p>Coordinación Atención Discapacidad</p><blockquote>“Cada paso es un logro compartido”</blockquote></div>
-<div class="tarjeta-equipo"><img alt="Persona trabajadora" src="../img/fotos equipo/vocal.jpg"/><h3>Nombre Apellido</h3><p>Coordinación Atención Mayores</p><blockquote>“El vínculo transforma”</blockquote></div>
-<div class="tarjeta-equipo"><img alt="Persona trabajadora" src="../img/fotos equipo/vocal.jpg"/><h3>Nombre Apellido</h3><p>Coordinación Atención Mayores</p><blockquote>“El vínculo transforma”</blockquote></div>
-<div class="tarjeta-equipo"><img alt="Persona trabajadora" src="../img/fotos equipo/vocal.jpg"/><h3>Nombre Apellido</h3><p>Coordinación Atención Mayores</p><blockquote>“El vínculo transforma”</blockquote></div>
-<div class="tarjeta-equipo"><img alt="Persona trabajadora" src="../img/fotos equipo/vocal.jpg"/><h3>Nombre Apellido</h3><p>Coordinación Atención Mayores</p><blockquote>“El vínculo transforma”</blockquote></div>
+<div class="tarjeta-equipo" onclick="abrirModal('persona10')"><img alt="Persona trabajadora" src="../img/fotos equipo/trabajador 1.jpg"/><h3>Nombre Apellido</h3><p>Coordinación Atención Discapacidad</p><blockquote>“Cada paso es un logro compartido”</blockquote></div>
+<div class="tarjeta-equipo" onclick="abrirModal('persona11')"><img alt="Persona trabajadora" src="../img/fotos equipo/vocal.jpg"/><h3>Nombre Apellido</h3><p>Coordinación Atención Mayores</p><blockquote>“El vínculo transforma”</blockquote></div>
+<div class="tarjeta-equipo" onclick="abrirModal('persona12')"><img alt="Persona trabajadora" src="../img/fotos equipo/vocal.jpg"/><h3>Nombre Apellido</h3><p>Coordinación Atención Mayores</p><blockquote>“El vínculo transforma”</blockquote></div>
+<div class="tarjeta-equipo" onclick="abrirModal('persona13')"><img alt="Persona trabajadora" src="../img/fotos equipo/vocal.jpg"/><h3>Nombre Apellido</h3><p>Coordinación Atención Mayores</p><blockquote>“El vínculo transforma”</blockquote></div>
+<div class="tarjeta-equipo" onclick="abrirModal('persona14')"><img alt="Persona trabajadora" src="../img/fotos equipo/vocal.jpg"/><h3>Nombre Apellido</h3><p>Coordinación Atención Mayores</p><blockquote>“El vínculo transforma”</blockquote></div>
 </div><button class="flecha-slider flecha-derecha" onclick="moverSlide(this, 1)">›</button>
-<button class="flecha-slider flecha-derecha" onclick="moverSlide(this, 1)">›</button>
 </div>
 </section>
 <section class="bloque-equipo-descarga">
@@ -106,5 +102,130 @@
       });
     }
   </script>
-</body>
+<script src="../js/modales.js"></script>
+<div class="modal-cv" id="persona1">
+  <div class="modal-contenido">
+    <span class="cerrar-modal" onclick="cerrarModal('persona1')">×</span>
+    <h3>Ana García</h3>
+    <p><strong>Cargo:</strong> Junta Directiva</p>
+    <p><strong>Reseña:</strong> Psicóloga con más de 15 años de experiencia en dirección de entidades sociales. Especializada en gestión de equipos, planificación estratégica y liderazgo ético.</p>
+  </div>
+</div>
+
+<div class="modal-cv" id="persona2">
+  <div class="modal-contenido">
+    <span class="cerrar-modal" onclick="cerrarModal('persona2')">×</span>
+    <h3>Luis Pérez</h3>
+    <p><strong>Cargo:</strong> Junta Directiva</p>
+    <p><strong>Reseña:</strong> Educador Social y presidente de AFANAS desde 2020. Ha liderado numerosos proyectos de innovación educativa y participación comunitaria.</p>
+  </div>
+</div>
+
+<div class="modal-cv" id="persona3">
+  <div class="modal-contenido">
+    <span class="cerrar-modal" onclick="cerrarModal('persona3')">×</span>
+    <h3>Carmen Ruiz</h3>
+    <p><strong>Cargo:</strong> Junta Directiva</p>
+    <p><strong>Reseña:</strong> Trabajadora social con enfoque en derechos humanos. Ha representado a la entidad en redes nacionales de discapacidad y diversidad.</p>
+  </div>
+</div>
+
+<div class="modal-cv" id="persona4">
+  <div class="modal-contenido">
+    <span class="cerrar-modal" onclick="cerrarModal('persona4')">×</span>
+    <h3>Miguel Torres</h3>
+    <p><strong>Cargo:</strong> Junta Directiva</p>
+    <p><strong>Reseña:</strong> Médico jubilado. Aporta visión sanitaria y experiencia en coordinación sociosanitaria desde la perspectiva de la atención integral centrada en la persona.</p>
+  </div>
+</div>
+
+<div class="modal-cv" id="persona5">
+  <div class="modal-contenido">
+    <span class="cerrar-modal" onclick="cerrarModal('persona5')">×</span>
+    <h3>Lucía Herrera</h3>
+    <p><strong>Cargo:</strong> Junta Directiva</p>
+    <p><strong>Reseña:</strong> Familiar de persona usuaria y portavoz del grupo de familias. Activa defensora de la accesibilidad universal y la vida independiente.</p>
+  </div>
+</div>
+
+<div class="modal-cv" id="persona6">
+  <div class="modal-contenido">
+    <span class="cerrar-modal" onclick="cerrarModal('persona6')">×</span>
+    <h3>Antonio López</h3>
+    <p><strong>Cargo:</strong> Junta Directiva</p>
+    <p><strong>Reseña:</strong> Licenciado en Derecho con experiencia en asesoría jurídica para entidades sin ánimo de lucro. Actualmente colabora en el área de gobernanza.</p>
+  </div>
+</div>
+
+<div class="modal-cv" id="persona7">
+  <div class="modal-contenido">
+    <span class="cerrar-modal" onclick="cerrarModal('persona7')">×</span>
+    <h3>Elena Martín</h3>
+    <p><strong>Cargo:</strong> Junta Directiva</p>
+    <p><strong>Reseña:</strong> Maestra de Educación Especial. Impulsora de proyectos inclusivos en el entorno educativo y comunitario.</p>
+  </div>
+</div>
+
+<div class="modal-cv" id="persona8">
+  <div class="modal-contenido">
+    <span class="cerrar-modal" onclick="cerrarModal('persona8')">×</span>
+    <h3>José Fernández</h3>
+    <p><strong>Cargo:</strong> Junta Directiva</p>
+    <p><strong>Reseña:</strong> Contable con experiencia en gestión presupuestaria y financiación pública. Voluntario activo en la mejora de procesos internos.</p>
+  </div>
+</div>
+
+<div class="modal-cv" id="persona9">
+  <div class="modal-contenido">
+    <span class="cerrar-modal" onclick="cerrarModal('persona9')">×</span>
+    <h3>Laura Gómez</h3>
+    <p><strong>Cargo:</strong> Junta Directiva</p>
+    <p><strong>Reseña:</strong> Representante del voluntariado. Aporta visión cercana al día a día de las personas usuarias desde el acompañamiento no profesional.</p>
+  </div>
+</div>
+
+<div class="modal-cv" id="persona10">
+  <div class="modal-contenido">
+    <span class="cerrar-modal" onclick="cerrarModal('persona10')">×</span>
+    <h3>Manuel Díaz</h3>
+    <p><strong>Cargo:</strong> Nuestro Equipo</p>
+    <p><strong>Reseña:</strong> Técnico en integración social. Coordina el área de apoyos personales en viviendas supervisadas.</p>
+  </div>
+</div>
+
+<div class="modal-cv" id="persona11">
+  <div class="modal-contenido">
+    <span class="cerrar-modal" onclick="cerrarModal('persona11')">×</span>
+    <h3>Paula Sánchez</h3>
+    <p><strong>Cargo:</strong> Nuestro Equipo</p>
+    <p><strong>Reseña:</strong> Terapeuta ocupacional experta en accesibilidad cognitiva y apoyos visuales. Desarrolla materiales en lectura fácil.</p>
+  </div>
+</div>
+
+<div class="modal-cv" id="persona12">
+  <div class="modal-contenido">
+    <span class="cerrar-modal" onclick="cerrarModal('persona12')">×</span>
+    <h3>Javier Romero</h3>
+    <p><strong>Cargo:</strong> Nuestro Equipo</p>
+    <p><strong>Reseña:</strong> Fisioterapeuta con experiencia en neurorehabilitación. Desarrolla talleres de movilidad funcional para personas adultas.</p>
+  </div>
+</div>
+
+<div class="modal-cv" id="persona13">
+  <div class="modal-contenido">
+    <span class="cerrar-modal" onclick="cerrarModal('persona13')">×</span>
+    <h3>Marta Vargas</h3>
+    <p><strong>Cargo:</strong> Nuestro Equipo</p>
+    <p><strong>Reseña:</strong> Psicólogo general sanitario. Colabora en la atención individualizada a personas con problemas de salud mental.</p>
+  </div>
+</div>
+
+<div class="modal-cv" id="persona14">
+  <div class="modal-contenido">
+    <span class="cerrar-modal" onclick="cerrarModal('persona14')">×</span>
+    <h3>Sergio León</h3>
+    <p><strong>Cargo:</strong> Nuestro Equipo</p>
+    <p><strong>Reseña:</strong> Animador sociocultural. Dinamiza las actividades lúdicas y comunitarias en centros de día y viviendas compartidas.</p>
+  </div>
+</div></body>
 </html>
