@@ -2567,7 +2567,7 @@ body.subpagina.equipo .hero-equipo img {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
-//* ==== CSS PARA PÁGINA INTRODUCTORIA ATENCIÓN-DISCAPACIDAD ==== */
+/* ==== CSS PARA PÁGINA INTRODUCTORIA ATENCIÓN-DISCAPACIDAD ==== */
 
 .hero-magico {
   text-align: center;
