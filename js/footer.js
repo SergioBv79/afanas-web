@@ -1,7 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   // ✅ Detecta si estamos en una subcarpeta o en una página legal que necesita rutas relativas con "../ cuando usamos ${base} "
-  const base = location.pathname.includes("/proyecto/") ? "../" : "";
+  const base = location.pathname.includes("/proyecto/")|| location.pathname.includes("/ambito-social/") ? "../" : "";
 
 
 
