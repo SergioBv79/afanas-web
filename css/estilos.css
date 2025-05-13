@@ -2658,29 +2658,34 @@ body.subpagina.equipo .hero-equipo img {
     background: linear-gradient(to right, #6cc2b3, #f5a623);
     display: block;
     text-align: center;
-    padding: 8px 12px;
+    padding: 4px 6px;
     height: auto;
     min-height: unset;
     margin-bottom: 0;
   }
 
   .hero-magico h1 {
-    font-size: 1em;
-    line-height: 1.3;
-    margin: 0;
-    max-width: 100%;
+    font-size: 2em !important;
+    text-align: center;
     white-space: normal;
+    word-break: break-word;
+    line-height: 1.2;
+    margin: 0 auto;
+    max-width: 100%;
   }
 
   .hero-magico p {
-    font-size: 0.8em;
+    font-size: 0.6em;
     line-height: 1.4;
     margin: 4px 0 0;
   }
 
   .menu-redes {
     margin-top: 0 !important;
-    padding-top: 2px !important;
-    padding-bottom: 2px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
   }
 }
+
+
+
