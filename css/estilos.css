@@ -2645,3 +2645,27 @@ body.subpagina.equipo .hero-equipo img {
     padding-bottom: 4px;
   }
 }
+
+/* ==========================================
+   ✅ AJUSTES RESPONSIVE PARA HERO EN MÓVIL
+   Reduce espacio vertical y tamaño de fuente
+   Página: atención-discapacidad.html y similares
+   ========================================== */
+
+@media (max-width: 768px) {
+  .hero-magico {
+    padding: 40px 20px 20px;
+  }
+
+  .hero-magico h1 {
+    font-size: 1.8em;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  .hero-magico p {
+    font-size: 1em;
+    line-height: 1.4;
+    margin-top: 10px;
+  }
+}
