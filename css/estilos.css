@@ -2638,65 +2638,40 @@ body.subpagina.equipo .hero-equipo img {
   margin-top: auto;
   align-self: center;
 }
-@media (max-width: 768px) {
-  .menu-redes {
-    margin-top: 0;
-    padding-top: 4px;
-    padding-bottom: 4px;
-  }
-}
+
 
 /* ==========================================
-   ✅ AJUSTES RESPONSIVE PARA HERO EN MÓVIL
-   Reduce espacio vertical y tamaño de fuente
-   Página: atención-discapacidad.html y similares
+   ✅ AJUSTES RESPONSIVE ÚNICOS PARA HERO AMBITO SOCIAL EN MÓVIL
+   Diseño tipo banner compacto + menú redes unido
    ========================================== */
 
 @media (max-width: 768px) {
   .hero-magico {
-    padding: 40px 20px 20px;
-  }
-
-  .hero-magico h1 {
-    font-size: 1.8em;
-    line-height: 1.2;
-    margin-bottom: 10px;
-  }
-
-  .hero-magico p {
-    font-size: 1em;
-    line-height: 1.4;
-    margin-top: 10px;
-  }
-}
-
-/* ==========================================
-   ✅ AJUSTES RESPONSIVE REFINADOS PARA HERO MÓVIL
-   Estilo banner compacto, menos altura y fuente
-   ========================================== */
-
-@media (max-width: 768px) {
-  .hero-magico {
-    padding: 15px 10px;
-    min-height: auto;
+    background: linear-gradient(to right, #6cc2b3, #f5a623);
+    display: block;
+    text-align: center;
+    padding: 12px 16px;
     height: auto;
+    min-height: unset;
+    margin-bottom: 0;
   }
 
   .hero-magico h1 {
-    font-size: 1.2em;
+    font-size: 1.1em;
     line-height: 1.2;
     margin: 0;
   }
 
   .hero-magico p {
     font-size: 0.85em;
-    margin-top: 5px;
-    margin-bottom: 0;
+    line-height: 1.4;
+    margin: 4px 0 0;
   }
 
   .menu-redes {
-    margin-top: 0;
+    margin-top: 0 !important;
     padding-top: 2px;
     padding-bottom: 2px;
   }
 }
+
