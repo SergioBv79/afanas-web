@@ -131,19 +131,13 @@ document.addEventListener("DOMContentLoaded", function () {
   <span class="desplegable">Ámbito social <span class="flecha flecha-desplegable">&#62;</span></span>
   <ul class="submenu-responsive">
     <li><a href="${base}ambito-social/atencion-discapacidad.html">Atención a personas con discapacidad</a></li>
-    <li><a href="${base}ambito-social/vivienda-hogar-discapacidad.html">Vivienda y hogar (Discapacidad)</a></li>
-    <li><a href="${base}ambito-social/centros-dia-discapacidad.html">Centros de día (Discapacidad)</a></li>
-    <li><a href="${base}ambito-social/apoyos-vida.html">Vida independiente</a></li>
-    <li><a href="${base}ambito-social/familias-discapacidad.html">Apoyo a familias</a></li>
-    <li><a href="${base}ambito-social/atencion-personas-mayores.html">Atención a personas mayores</a></li>
-    <li><a href="${base}ambito-social/vivienda-hogar-mayores.html">Vivienda y hogar (Mayores)</a></li>
-    <li><a href="${base}ambito-social/centros-dia-mayores.html">Centros de día (Mayores)</a></li>
-    <li><a href="${base}ambito-social/familias-mayores.html">Apoyo a familias (Mayores)</a></li>
     <li><a href="${base}ambito-social/atencion-temprana.html">Atención temprana</a></li>
     <li><a href="${base}ambito-social/educacion-especial.html">Educación especial</a></li>
     <li><a href="${base}ambito-social/atencion-menores.html">Atención a menores</a></li>
+    <li><a href="${base}ambito-social/atencion-personas-mayores.html">Atención a personas mayores</a></li>
   </ul>
 </li>
+
 
       <li><span class="desplegable">Ámbito empresarial <span class="flecha">&#62;</span></span></li>
       <li><span class="desplegable">Visitas <span class="flecha">&#62;</span></span></li>
