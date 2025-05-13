@@ -2669,3 +2669,34 @@ body.subpagina.equipo .hero-equipo img {
     margin-top: 10px;
   }
 }
+
+/* ==========================================
+   ✅ AJUSTES RESPONSIVE REFINADOS PARA HERO MÓVIL
+   Estilo banner compacto, menos altura y fuente
+   ========================================== */
+
+@media (max-width: 768px) {
+  .hero-magico {
+    padding: 15px 10px;
+    min-height: auto;
+    height: auto;
+  }
+
+  .hero-magico h1 {
+    font-size: 1.2em;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .hero-magico p {
+    font-size: 0.85em;
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+
+  .menu-redes {
+    margin-top: 0;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+}
