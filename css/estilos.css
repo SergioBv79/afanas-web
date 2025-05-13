@@ -2566,30 +2566,27 @@ body.subpagina.equipo .hero-equipo img {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
-/* ==== CENTRAR SECCIÓN DOCUMENTACIÓN ==== */
-.bloque-equipo-descarga {
-  text-align: center;
-  margin-top: 60px;
-  padding: 30px 20px;
-}
-
-.bloque-equipo-descarga h2 {
-  font-size: 1.6em;
-  color: #0e3a60;
-  margin-bottom: 10px;
-}
-
-/* ==== CSS PARA PÁGINA INTRODUCTORIA ATENCIÓN-DISCAPACIDAD ==== */
+//* ==== CSS PARA PÁGINA INTRODUCTORIA ATENCIÓN-DISCAPACIDAD ==== */
 
 .hero-magico {
-  margin-bottom: 10px; /* 🔽 Ajuste fino para unir con intro */
-  padding-bottom: 20px; /* por si el degradado no tiene fondo fijo */
+  margin-bottom: 0;
+  padding: 60px 20px 30px 20px; /* top right bottom left */
 }
 
 .intro-ambito {
-  padding-top: 10px;
-  padding-bottom: 5px;
-  margin-bottom: 0;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.intro-ambito .contenedor {
+  padding: 0;
+  margin: 0;
+}
+
+.intro-ambito h2,
+.intro-ambito p {
+  margin-top: 0;
+  margin-bottom: 8px; /* mínimo espacio entre textos */
 }
 
 .secciones-magicas {
@@ -2597,8 +2594,8 @@ body.subpagina.equipo .hero-equipo img {
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  padding: 10px 20px;  /* ⬅️ menos padding arriba y abajo */
-  margin-top: 0;
+  margin-top: 10px;
+  padding: 0 20px 20px 20px; /* sin padding arriba */
 }
 
 .bloque-magico {
@@ -2622,6 +2619,7 @@ body.subpagina.equipo .hero-equipo img {
 
 .bloque-magico p {
   flex-grow: 1;
+  margin: 0 0 10px;
 }
 
 .bloque-magico .boton {
